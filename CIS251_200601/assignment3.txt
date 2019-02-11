@@ -1,0 +1,114 @@
+// Author: Kenneth Robinson
+// Date: Feb 16, 2006
+// CIS-251
+
+#include <iostream>  
+using namespace std;
+
+double liters;		//amount in liters
+double gallons;		//amount in gallons
+double miles;		//number of miles
+double miles_per_gallon(double gallons, double miles);
+double liters_gallon(double liters);		//convert liters to gallons
+
+int main()
+{
+   double mpg;
+   char   again;
+
+   cout.setf(ios::fixed);
+   cout.setf(ios::showpoint);
+
+   cout << "This program will calculate miles per gallon" << endl;
+   cout << "from liters to gallons." << endl;
+   
+   do
+   {  cout << "\n\nEnter number of liters: ";
+      cin >> liters;
+      cout << "\nEnter number of miles: ";
+      cin >> miles;
+
+	  gallons = liters_gallon(liters);
+
+	  mpg = miles_per_gallon(gallons, miles);
+
+      cout.precision(2);
+      cout << "\nWith " << liters << " liters and " << miles <<" miles,\n";
+      cout << "the miles per gallon would be " << mpg << endl;
+
+      cout << "\nDo you want to do another calculation(Y/N)? ";
+      cin >> again;
+   } while (again == 'y' || again == 'Y');
+
+   cout << "\nEnd of Program!" << endl;
+
+    system("pause"); // Hold message on screen until key is pressed
+
+   return 0;
+}
+
+double liters_gallon(double liters)
+{
+	double liters_gallon;
+
+	liters_gallon = liters * 0.264179;
+
+	return liters_gallon;
+}
+
+double miles_per_gallon(double gallons, double miles)
+{
+   double mpg;   
+
+   mpg = miles/gallons;
+
+   return mpg;
+}
+
+
+
+This program will calculate miles per gallon
+from liters to gallons.
+
+
+Enter number of liters: 12.9
+
+Enter number of miles: 100
+
+With 12.90 liters and 100.00 miles,
+the miles per gallon would be 29.34
+
+Do you want to do another calculation(Y/N)? y
+
+
+Enter number of liters: 15.2
+
+Enter number of miles: 100
+
+With 15.20 liters and 100.00 miles,
+the miles per gallon would be 24.90
+
+Do you want to do another calculation(Y/N)? y
+
+
+Enter number of liters: 32.2
+
+Enter number of miles: 250.5
+
+With 32.20 liters and 250.50 miles,
+the miles per gallon would be 29.45
+
+Do you want to do another calculation(Y/N)? y
+
+
+Enter number of liters: 37.8
+
+Enter number of miles: 250.5
+
+With 37.80 liters and 250.50 miles,
+the miles per gallon would be 25.09
+
+Do you want to do another calculation(Y/N)? n
+
+End of Program!
+Press any key to continue . . .

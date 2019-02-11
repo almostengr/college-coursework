@@ -1,0 +1,64 @@
+This program can calculate the values needed for
+customer Accounts.
+
+Press any key to continue . . .
+
+
+
+Enter the input file name (maximum of 35 characters please)
+:> accounts.txt
+Original Balance: $6
+Interest: $0.09
+Minimum Payment: $6.09
+Total due: $6.18
+
+Original Balance: $10.00
+Interest: $0.15
+Minimum Payment: $1.02
+Total due: $10.30
+
+Original Balance: $20.00
+Interest: $0.30
+Minimum Payment: $2.03
+Total due: $20.60
+
+Original Balance: $90.00
+Interest: $1.37
+Minimum Payment: $9.13
+Total due: $92.72
+
+Original Balance: $100.00
+Interest: $1.52
+Minimum Payment: $10.15
+Total due: $103.02
+
+Original Balance: $200.00
+Interest: $3.04
+Minimum Payment: $20.30
+Total due: $206.04
+
+Original Balance: $1000.00
+Interest: $15.15
+Minimum Payment: $101.50
+Total due: $1030.15
+
+Original Balance: $1500.00
+Interest: $20.20
+Minimum Payment: $152.00
+Total due: $1540.20
+
+Original Balance: $2000.00
+Interest: $25.25
+Minimum Payment: $202.50
+Total due: $2050.25
+
+Original Balance: $2500.00
+Interest: $30.30
+Minimum Payment: $253.00
+Total due: $2560.30
+
+
+Do you want to process another file (Y/N)? n
+
+End of Program!
+Press any key to continue . . .
