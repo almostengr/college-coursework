@@ -1,0 +1,5 @@
+public exceptionPractice() throw Exception{
+	
+
+
+} 
