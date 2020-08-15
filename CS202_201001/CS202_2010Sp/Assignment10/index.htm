@@ -1,0 +1,123 @@
+﻿<!--
+
+For the last assignment, you will use what you have learned to create a web page about yourself. This web page can discuss a favorite hobby interest if you prefer.
+
+You will create this web page using Notepad and you will FTP your web page AND its supporting files (such as images and multimedia) to the bama.ua.edu server.
+
+Your web page must:
+
+Be named index.htm. The filename, index.htm, is the expected filename of a homepage on bama.ua.edu. 
+Feature at least 1 paragraph of information. 
+Contain at least 3 images. 
+Use CSS for formatting. Your page should use a background color, have styles for font-family, and provide at least 1 style for hyperlinks. 
+Contain a table. 
+Contain hyperlinks to 3 different URLs. 
+Feature a mailto: hyperlink that someone could use to send you email. 
+Contain a list of at least 4 items. 
+Feature background sound. 
+Use JavaScript to count the number of days to an event (your birthday, the start of hunting season, a concert, etc) and print this information on the screen. 
+For information about how to FTP files to a server check out the NEW link on our elearning course homepage in the announcements section.
+
+Your URL will be structured as http://bama.ua.edu/~bamaname where bamaname represents your bama username.
+
+To submit your assignment, create a Word file that has your name, cwid, and the URL to your website on bama.ua.edu. Upload this Word file through the Assignment Submission tool. Merely submitting the webpage files to me will result in a grade no higher than 15% on this assignment.
+
+
+-->
+
+<html>
+<head>
+	<title> </title>
+	<style type="text/css">
+		body{
+			background-color: red;
+			color: #ffffff;
+			font-family: arial, sans-serif;
+		}
+		a:link{
+			color: #ffffff;
+		}
+		a:active, a:visited{
+			color: #cccccc;
+		}
+		p{
+			text-align: center;
+		}
+		table, td{
+			background-color: #000000;
+			border-color: #ffffff;
+			border-style: solid;
+			border-width: 3px;
+			color: #ffffff;
+		}
+	</style>
+	
+</head>
+<body onload="startclock()">
+
+<p>
+<a href="mailto:dmpowell@crimson.ua.edu">Email Me</a>
+</p>
+
+<p>The University of Alabama (also known as Alabama, UA, or colloquially as 'Bama) is a public coeducational university  located in Tuscaloosa, Alabama, USA. Founded in 1831, it is the flagship university of the University of Alabama System. Within Alabama, it is often called "the Capstone". UA is the senior and the largest in terms of enrollment of the state's major research universities, the others being rival Auburn University and fellow UA System institutions the University of Alabama in Huntsville (UAHuntsville) and the University of Alabama at Birmingham (UAB). <br /><span style="font-size:x-small;">Source: Wikipedia</span></p>
+
+
+<table>
+	<tr>
+		<td>
+			<a href="http://www.ua.edu">University Homepage</a>
+		</td>
+		<td>
+			<a href="http://mybama.ua.edu">MyBama</a>
+		</td>
+		<td>
+			<a href="http://elearning.ua.edu"><img src="elearning_top_thing.gif" alt="" /><br />Elearning</a>
+		</td>
+	</tr>
+</table>
+
+
+<ul>
+	<li>Sunday</li>
+	<li>Monday</li>
+	<li>Tuesday</li>
+	<li>Wednesday</li>
+	<li>Thursday</li>
+	<li>Friday</li>
+	<li>Saturday</li>
+</ul>
+
+
+<img src="holding-the-sun.jpg" alt="" width="405" height="289" /><br />
+<img src="grass_lrg.jpg" alt="" /><br />
+
+
+<script type="text/javascript">
+
+var before="Independence Day"
+var current="Today is Independence Day. Don\'t forget the fireworks!"
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+function countdown(yr,m,d){
+     var today=new Date()
+     var todayy=today.getYear()
+     if (todayy < 1000)
+	     todayy+=1900
+     var todaym=today.getMonth()
+     var todayd=today.getDate()
+     var todaystring=montharray[todaym]+" "+todayd+", "+todayy
+     var futurestring=montharray[m-1]+" "+d+", "+yr
+     var difference=(Math.round((Date.parse(futurestring)-Date.parse(todaystring))/(24*60*60*1000))*1)
+     if (difference==0)
+	     document.write(current)
+     else if (difference>0)
+	     document.write("Only "+difference+" days until "+before)
+}
+//enter the count down date using the format year/month/day
+countdown(2010,7,4)
+</script>
+
+
+
+</body>
+</html>

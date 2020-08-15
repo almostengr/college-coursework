@@ -1,4 +1,4 @@
-//Kenneth Robinson
+//
 // Assignment 2
 // CIS-251
 

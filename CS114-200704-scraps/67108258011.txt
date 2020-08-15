@@ -1,0 +1,80 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+//do not alter the function headings to "massage" the project in your favor
+
+    class Team{
+   private:
+      string name; //school name
+      int harrisPoints; //Harris Points received
+      int coachesPoints; //Coaches' Points received
+      int computerRankings[6]; //array contains each of the 6 computer rankings
+	  string conference; //conference that the school belongs to
+   public:
+       Team(); //constructor, initializes all points to zero
+       void setTeam(string, int, int, int[], string); //sets Team info - name, points, conference
+       void setName(string); //set the Team's name
+       void setHarris(int); //set the Team's Harris Points
+       void setCoaches(int); //set the Team's Coaches' Points
+       void setComputer(int[]); //set the Team's Computer Points
+	   void setConference(string); //set the Team's Conference
+       string getName(); //getter for the Team Name
+       int getHarris(); //getter for Harris Points
+       int getCoaches(); //getter for Coaches' Points
+       void getComputer(int[]); //getter for computer points
+	   string getConference(); //getter for conference
+       int computerHigh(); //returns highest computer points received
+       int computerLow(); //returns lowest computer points received
+       double bcs(int, int); //computes and returns a Team's BCS score; 2 arguments are total possible harris points and total possible coaches points
+	   void print(int, int); //prints out Team's information, namely the points earned in each poll and computer ranking model; 2 arguments are total possible harris points and total possible coaches points
+   };
+   
+	//See P7/8 description document for details on the following 8 functions:
+    void read(Team[], int&, int&);
+    void orderBCSRankings(Team[], int, int);
+    void printBCSFile(Team[], int, int);
+    void printBCSScreen(Team[], int, int);
+	char menu();
+	void findTeam(string, Team[], int, int);
+	void findConference(string, Team[], int, int);
+	void orderByPoll(Team[], string);
+	void bowlProjections(Team[]); //bonus function
+
+
+	//You are given this code -- DO NOT MODIFY MAIN
+    int main(){
+      Team bcs_rankings[25];
+	  int harris, coaches;
+      char ans = 'y';
+	  string locate_team, locate_conference;
+      read(bcs_rankings, harris, coaches);
+      orderBCSRankings(bcs_rankings, harris, coaches);
+	  while (ans == 'y'){
+         ans = menu();
+		 switch(ans){
+			 case '1': printBCSFile(bcs_rankings, harris, coaches);
+				 break;
+			 case '2': printBCSScreen(bcs_rankings, harris, coaches);
+				 break;
+			 case '3': cout<<"Enter the name of the team (use underscore in lieu of space): ";
+				 cin>>locate_team;
+				 findTeam(locate_team, bcs_rankings, harris, coaches);
+				 break;
+			 case '4': orderByPoll(bcs_rankings, "Harris");
+				 break;
+			 case '5': orderByPoll(bcs_rankings, "Coaches");
+				 break;
+			 case '6': cout<<"Enter conference: ";
+				 cin>>locate_conference;
+				 findConference(locate_conference, bcs_rankings, harris, coaches);
+				 break;
+			 case '7': bowlProjections(bcs_rankings);
+		 }
+		 if (ans=='4'||ans=='5') orderBCSRankings(bcs_rankings, harris, coaches);
+         cout<<endl<<endl<<"Continue?(y/n) ";
+		 cin>>ans;
+      }
+      
+   }

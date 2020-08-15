@@ -1,0 +1,182 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class Paint extends JFrame {
+
+	BlankLabel blanklabel;	//CREATE A NEW BLANKLABEL TYPE OF BLANKLABEL
+
+
+	public Paint() {
+		setTitle("Paint Paint");
+		setSize(500,500);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		blanklabel = new BlankLabel(Color.white);	//
+		//add(blanklabel);	//ADDING BLANKLABEL
+
+
+		GridBagLayout gbl = new GridBagLayout();
+		setLayout(gbl);
+
+		GridBagConstraints c = new GridBagConstraints();
+
+		BigRectangle canvas = new BigRectangle(Color.white);
+/*
+		c.gridx = 1;	
+		c.gridy = 0;
+		c.gridwidth=13;
+		add(blanklabel,c);	//DRAWS CANVAS
+		
+
+		c.gridx = 1;
+		c.gridy = 0;
+		c.gridwidth = 13;
+		add(canvas, c);	//DRAWS CANVAS
+*/
+
+
+		c.gridx = 0;
+		c.gridy = 0;
+		Rectangle shapes = new Rectangle(Color.red, "");
+		shapes.addMouseListener(shapes);	
+		add(shapes, c);
+
+
+		//START OF DRAWING COLOR PALETTE
+		c.gridx = 1;
+		c.gridy = 1;
+		Rectangle green = new Rectangle(Color.green, "Green");	
+		green.addMouseListener(green);
+		add(green, c);
+
+		c.gridx = 2;
+		c.gridy = 1;
+		Rectangle yellow = new Rectangle(Color.yellow, "Yellow");
+		yellow.addMouseListener(yellow);
+		add(yellow, c);
+
+		c.gridx = 3;
+		c.gridy = 1;
+		Rectangle orange = new Rectangle(Color.orange, "Orange");
+		orange.addMouseListener(orange);
+		add(orange,c);
+
+		c.gridx = 4;
+		c.gridy = 1;
+		Rectangle black = new Rectangle(Color.black, "Black");
+		black.addMouseListener(black);
+		add(black,c);
+
+		c.gridx = 5;
+		c.gridy = 1;
+		Rectangle blue = new Rectangle(Color.blue, "Blue");
+		blue.addMouseListener(blue);
+		add(blue,c);
+
+		c.gridx = 6;
+		c.gridy = 1;
+		Rectangle cyan = new Rectangle(Color.cyan, "cyan");
+		cyan.addMouseListener(cyan);
+		add(cyan,c);
+
+		c.gridx = 7;
+		c.gridy = 1;
+		Rectangle darkgray = new Rectangle(Color.darkGray, "darkgray");
+		darkgray.addMouseListener(darkgray);
+		add(darkgray,c);
+
+		c.gridx = 8;
+		c.gridy = 1;
+		Rectangle lightgray = new Rectangle(Color.lightGray, "lightgray");
+		lightgray.addMouseListener(lightgray);
+		add(lightgray,c);
+
+		c.gridx = 9;
+		c.gridy = 1;
+		Rectangle magenta = new Rectangle(Color.magenta, "magenta");
+		magenta.addMouseListener(magenta);
+		add(magenta,c);
+
+		c.gridx = 10;
+		c.gridy = 1;
+		Rectangle pink = new Rectangle(Color.pink, "pink");
+		pink.addMouseListener(pink);
+		add(pink,c);
+
+		c.gridx = 11;
+		c.gridy = 1;
+		Rectangle red = new Rectangle(Color.red, "red");
+		red.addMouseListener(red);
+		add(red,c);
+
+		c.gridx = 12;
+		c.gridy = 1;
+		Rectangle white = new Rectangle(Color.white, "white");
+		white.addMouseListener(white);
+		add(white,c);
+
+		c.gridx = 13;
+		c.gridy = 1;
+		Rectangle gray = new Rectangle(Color.gray, "gray");
+		gray.addMouseListener(gray);
+		add(gray,c);
+		//END OF DRAWING COLOR PALETTE
+
+
+
+	//pack();	//RESIZES WINDOW
+	}
+
+	public static void main(String args[]) {
+		Paint e = new Paint();
+	}
+}
+
+
+class Rectangle extends JLabel implements MouseListener {
+ 
+	public Dimension minSize = new Dimension(30,100); 
+		Color bg;
+		String name;
+
+	public Rectangle(Color c, String text) {
+		super(text);
+		bg = c;
+		name = text;
+	}
+
+	public void paint(Graphics g) {
+		g.setColor(bg);
+		g.fillRect(0,0,(int) minSize.getWidth(), (int) minSize.getHeight());
+	}
+
+	public Dimension getMinimumSize() {
+		return minSize;
+	}
+
+	public Dimension getPreferredSize() {
+		return minSize;
+	}
+
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("You clicked " + name + " at " + e.getX() + ", " + e.getY());
+	}
+
+	public void mouseEntered(MouseEvent e) {}
+
+	public void mouseExited(MouseEvent e) {}
+
+	public void mousePressed(MouseEvent e) {}
+
+	public void mouseReleased(MouseEvent e) {}
+}
+
+class BigRectangle extends Rectangle {
+	public BigRectangle(Color c) {
+		super(c,"");
+		minSize = new Dimension(400,400);
+	}
+}

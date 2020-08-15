@@ -19,7 +19,7 @@ pointer_variable->member_name
 /*START DISPLAY OF ITEMS IN LINKED LIST - PAGE 745*/
 /* 	displaying a linked list 
 	to output the data in all the nodes in a linked  list*/
-//Kenneth Robinson
+//
 #include <iostream>
 using namespace std;
 

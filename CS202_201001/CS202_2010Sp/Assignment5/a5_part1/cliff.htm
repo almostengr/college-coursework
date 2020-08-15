@@ -1,0 +1,86 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 8
+   Tutorial Case
+
+   Cliff Hangers Climbing School
+   Author: 
+   Date:   2/17/09
+
+   Filename:         cliff.htm
+   Supporting files: head.htm, home.htm, links.htm
+-->
+   <title>Cliff Hangers Climbing School</title>
+   <link href="noframes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<frameset rows="85,*" border="0">
+	<!--Company Logo -->
+	<frame src="head.htm" scrolling="no" marginheight="0" noresize="noresize" name="logo" frameborder="0" />
+	
+	<!-- Nested Frameset -->
+	<frameset cols="140,*">
+		<!-- List of Links -->
+		<frame src="links.htm" noresize="noresize" name="links" frameborder="0" />
+		
+		<!-- Cliff Hangers Web Pages -->
+		<frame src="home.htm" noresize="noresize" name="pages" frameborder="0" />
+	</frameset>
+</frameset>
+
+<!-- Noframes version of this page -->
+<noframes>
+	<body>
+         <div id="head"><img src="chlogo.jpg" alt="Cliff Hangers" /></div>
+
+         <div id="pageContent">
+            <div id="leftCol">
+              <ul>
+                 <li><a href="home.htm">Home Page</a></li>
+                 <li><a href="philosph.htm">Our Philosophy</a></li>
+                 <li><a href="lessons.htm">Climbing Lessons</a></li>
+                 <li><a href="links.htm">Tours</a></li>
+              <ul>
+                 <li><a href="grepon.htm">Petit Grepon</a></li>
+                 <li><a href="lumpy.htm">Lumpy Ridge</a></li>
+                 <li><a href="nface.htm">North Face</a></li>
+                 <li><a href="kieners.htm">Kiener's</a></li>
+                 <li><a href="diamond.htm">The Diamond</a></li>
+                 <li><a href="eldorado.htm">Eldorado</a></li>
+              </ul>
+                 <li><a href="staff.htm">Staff</a></li>
+              </ul>   
+            </div>
+            
+            <div id="rightCol">
+               <div style="float:right; margin: 0px 0px 10px 10px">
+                 <img src="home.jpg" alt="" />
+               </div>
+               <p id="firstp">
+                  Welcome to one of America's best climbing schools located in one of 
+                  America's best climbing areas, the Colorado Rockies. Nowhere else in 
+                  America is there such a rich variety of technically 
+                  challenging rock, ice, and high alpine routes. The area presents the 
+                  climber with a choice of multiple-pitch climbs and big wall routes. Whether 
+                  you are here to enjoy the spectacular scenery or to train for an expedition, 
+                  you can choose no better place than the Colorado Front Range.</p>
+               <p>And no one else brings the experience of the Rockies to you better than 
+                  <span style="font-weight: bold; color: #993300">Cliff Hangers Climbing 
+                  School</span>. Whether you are a beginner, itching to learn the skill and art of 
+                  climbing, or an experienced mountaineer looking for guides to take you on 
+                  some of Rocky Mountain National Park's more challenging climbs, consider us 
+                  your gateway to the mountains.</p>
+               <p>We provide five levels of instruction, ranging from Beginner to Advanced,
+                  including lessons in aid and ice climbing. Members of our experienced staff
+                  have led expeditions in Mexico, Nepal, and Pakistan. All have intimate
+                  knowledge of the Colorado Rockies and know the best places to go
+                  to help you experience the wonder and beauty of the area.</p>
+               <p>So contact us today, and start climbing tomorrow!</p>
+            </div>
+
+         </div>
+      </body>
+</noframes>
+</html>

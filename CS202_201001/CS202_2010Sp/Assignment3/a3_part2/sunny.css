@@ -1,0 +1,94 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 3
+   Review Assignment
+
+   Sunny Acres Holiday Festival Style Sheet
+   Author:
+   Date:   2/16/2010
+
+
+
+
+   Filename:         sunny.css
+   Supporting Files: greenbar.jpg
+
+
+
+
+*/
+
+
+body{
+	margin: 0px 0px 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+	background-repeat: repeat-y;
+	background-image: url('greenbar.jpg');
+	background-position: top left;
+	}
+h1{
+	border-bottom-color: green;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	margin: 0px 0px 0px 0px;
+	}
+	
+h2,h3{
+	color: white;
+	background-color: green;
+	padding-left: 5px;
+	letter-spacing: 7px;
+	}
+h3{
+	width: 200px;
+	}
+address{
+	color: green;
+	font-size: 8pt;
+	text-align: center;
+	padding-top: 5px;
+	border-top-color: green;
+	border-top-style: solid;
+	border-top-width: 3px;
+	}
+#outer{
+	width: 770px;
+	}
+#inner{
+	margin-left: 225px;
+	padding-left: 10px;
+	}
+	
+#photobox{
+	float: right;
+	text-align: center;
+	font-size: 8pt;
+	font-style: italic;
+	background-color: rgb(255,215,71);
+	margin: 10px 0px 10px 10px;
+	border-bottom: 4px solid black;
+	border-right: 4px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	}
+#photo{
+	float: left;
+	display: block;
+	}
+#links{
+	float: left;
+	}
+#links p {
+	min-width: 180px;
+	margin-left: 5px;
+	padding-left: 5px;
+	background-color: rgb(255,215,71);
+	border-bottom: 3px solid black;
+	border-right: 3px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	}
+a{
+	text-decoration: none;
+	}

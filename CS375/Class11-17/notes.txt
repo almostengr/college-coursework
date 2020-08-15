@@ -1,0 +1,127 @@
+-----THREADS-----
+-A thread is a light-weight process
+-Can have the same variable name in separate threads
+-Processes do not have shared memory.
+-implements Runnable and then required to have a Run; create new thread by passing the thing that is runnable;
+
+
+-class Thread
+
+Thread t = new Thread(this);	//this refers to the current object
+t.start();	//all threads start with a ".start();" and call the void Run function
+
+
+-extend a thread
+
+Extends Thread;	 //thread is an abstract class and therefore you have to define run
+start();	//only have to stay start(); since inside the thread and threads know how to start
+
+
+-synchronized allows only one thing to run at a time.
+	-prevents  blind reads and blind writes and accidentally destroying information
+
+public synchronized Boolean amethod(){	//is placed within the thread
+	//locks a thread so that it has priority
+}
+
+
+
+-----KEYWORDS-----
+-public - anybody can use it
+-class - it's a class; can be defined anywhere except in a parameter;
+-static - only one instance of it; can be referenced without having to create and instance of it;
+-extends - allows current class to inherit from another class; can only inherit from one class
+-implements - use an interface (which is a contract and parameters must be provided)
+-interface - defines an interface with the 
+-abstract - unfinished class; other parts of the class must be defined else will get a compiler error
+-void - doesn't return a value;
+-import - loads a library; similar to "include" in C++; using * in the name uses all parts of that library;
+-int - integer, 32-bit
+-double - 
+-char
+-float
+-boolean
+-switch - 
+-case
+-break
+-try - includes the code that might throw an exception
+-catch - if there is an exception, then what to do with the exception
+-return
+-while
+-do
+-for
+-throws
+-finally - runs code when there is not an exception;
+-this*
+-if
+-else
+-goto
+-private - only objects my class can access it
+-protected - only objects of my class and descendents can access it
+-generics - are like templates in C++; at compile time, can specify the data type;
+-double buffer
+-java.swing.* - layouts, JLayouts, JFrame; GridBagLayout
+-java.util.Scanner 
+
+
+
+-----GENERICS (TEMPLATES)-----
+class Foo<T>{	//if there is more than one type then Foo<T,E>
+	public T foo(){
+	}
+
+}
+
+Foo<Boolean> f = new Foo<Boolean>();	//have to specify the type when calling the class
+
+
+
+-----ITERATORS-----
+Collection whatever Collection = ... ;
+Iterator i  = c.Iterator();
+while(i.hasNext()){
+	Double d = i.next();
+}
+
+for (Double D; whatever Collection){
+}
+
+class MyC <T> implements Itrable <T>{
+	public void next(){
+		//does something
+	}
+	public boolean hasNext(){
+		//sees if there is something afterward
+	}
+}
+
+
+
+
+
+
+-----EXCEPTIONS-----
+void f() throws Exception{
+	throw new MyException();
+}
+
+class MyException extends Exception{
+}
+
+void g() throws Exception{
+	f();
+}
+
+
+
+	try{
+		f();
+		g();
+	}
+	catch(MyException me){
+		blowUp();
+	}
+	catch(Exception e){
+		giveCandy();
+	}
+	finally{

@@ -1,0 +1,91 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 7
+   Tutorial Case
+
+   Jumbo Popcorn Style Sheet
+
+   Filename:         jp.css
+   Supporting Files: bottom.png, bottomleft.png, bottomright.png, button.jpg, 
+                     left.png, popcorn.jpg, top.png, topleft.png, topright.png,
+                     right.png
+
+*/
+
+body                   {margin: 0px; padding: 0px; font-size: 15px; 
+                        font-family: Arial, Helvetica, sans-serif}
+
+#head                  {position: absolute; top: 0px; left: 0px}
+
+#links                 {position: absolute; top: 155px; left: 130px; width: 750px}
+
+#links ul              {list-style-type: none; padding: 0px; margin: 0px}
+#links li              {display: block; float: left; font-size: 14px;
+                        background: url(button.jpg) no-repeat center center;
+                        width: 100px; height: 33px; text-align: center; margin-right: 2px}
+#links a               {display: block; color: white; text-decoration: none; margin-top: 5px}
+#links a:hover         {color: black}
+
+#pageContent          {position: absolute; top: 210px; left: 0px; width: 870px;
+                       background: url(popcorn.jpg) repeat-y 0px 40px}
+
+#pageContent h1       {background-color: white;
+                       font-weight: bold; font-size: 28px; letter-spacing: 6px;
+                       margin: 0px; padding: 0px 0px 5px 10px}
+
+#pageContent h2       {font-size: 16px; text-align: center; margin: 0px 0px 10px 0px;
+                       color: white; letter-spacing: 5px}
+#pageContent p        {font-size: 12px}
+
+
+#filmlinks            {float: left; width: 180px; margin-right: 23px}
+#filmlinks ul         {list-style-type: none; padding: 0px; margin: 0px; margin-left: 10px}
+#filmlinks ul li      {font-size: 16px; margin-top: 10px; font-weight: bold}
+#filmlinks ul ul li   {font-size: 12px; margin-top: 0px; font-weight: normal}
+#filmlinks ul ul      {margin-left: 20px}
+#filmlinks a          {color: black; text-decoration: none}
+#filmlinks a:hover    {text-decoration: underline}
+
+#middleColumn         {float: left; width: 300px; margin-right: 10px}
+#rightColumn          {float: left; width: 320px}
+
+#cast                 {width: 300px; margin-bottom: 10px}
+#cast h2              {background-color: black}
+#cast p               {margin: 0px 0px 10px}
+
+#synopsis             {width: 300px; margin-bottom: 10px}
+#synopsis h2          {background-color: rgb(202,148,28)}
+#synopsis img         {float: right; clear: right; margin-right: -10px}
+#synopsis p           {margin: 0px 0px 10px}
+
+#notes1               {width: 320px; margin-bottom: 10px}
+#notes1 h2            {background-color: rgb(202,148,28)}
+#notes1 p             {margin: 0px 0px 10px}
+
+#notes2               {width: 320px; margin-bottom: 10px}
+#notes2 h2            {background-color: black}
+#notes2 p             {margin: 0px 0px 10px}
+
+.topLeft              {background: url(topleft.png) no-repeat top left}
+.topRight             {background: url(topright.png) no-repeat top right}
+.bottomLeft           {background: url(bottomleft.png) no-repeat bottom left}
+.bottomRight          {background: url(bottomright.png) no-repeat bottom right}
+.top                  {background: url(top.png) repeat-x top}
+.bottom               {background: url(bottom.png) repeat-x bottom}
+.left                 {background: url(left.png) repeat-y left}
+.right                {background: url(right.png) repeat-y right}
+.roundedBox           {margin: 5px}
+.boxContent           {padding: 16px}
+
+#bottomlinks          {clear: left}
+#bottomlinks ul       {list-style-type: none; padding: 0px; margin: 0px 0px 0px 20px;
+                        border-top: 1px solid black}
+#bottomlinks li       {display: block; float: left; font-size: 10px;
+                       width: 110px; height: 33px; text-align: center; margin-right: 2px}
+#bottomlinks a        {display: block; color: black; text-decoration: none; margin-top: 5px}
+#bottomlinks a:hover  {color: black; text-decoration: underline}
+
+
+
+
+

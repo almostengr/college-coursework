@@ -1,0 +1,40 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 6
+   Case Problem 2
+
+   Civil War Style Sheet
+   Author: Adanya Lynee
+   Date:   3/1/2011
+
+   Filename:         cw.css
+   Supporting Files: 
+
+*/
+body         {font-family: Verdana, Geneva, sans-serif; margin: 0px; height: 100%}
+
+#heading     {width: 800px; text-align: center; background-image: url(tan.jpg)}
+
+#leftColumn  {width: 130px; font-size: 12px; float: left; background-image: url(tan.jpg);
+              height: 900px}
+
+#leftColumn ul {list-style-type: none; margin-left: 10px; padding-left: 0px}
+#leftColumn li {line-height: 2.4}
+#leftColumn a  {text-decoration: none; color: black}
+#leftColumn a:visited {color: black}
+#leftcolumn a:hover {text-decoration: underline overline}
+
+#rightColumn   {float: left; width: 650px; font-size: 12px; padding-left: 15px}
+#rightColumn h1  {text-align: center; margin: 0px; padding: 0px; font-weight: normal;
+                font-size: 28px; letter-spacing: 5px; margin-top: 10px}
+
+#rightColumn p {text-align: center; padding: 0px; margin: 10px 30px 20px}
+
+
+
+
+
+
+
+
+

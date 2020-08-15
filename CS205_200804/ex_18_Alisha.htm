@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--  -->
+<!-- October 17, 2008 -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Javascript</title>
+   </head>
+
+   <body>
+      
+<script type="text/javascript">
+
+var x=window.prompt("What is the first number?");
+var y=window.prompt("What is the second number?");
+var z=window.prompt("What is the third number?");
+var smallest;
+var largest;
+
+x=parseInt(x);
+y=parseInt(y);
+z=parseInt(z);
+
+var sum=x+y+z;
+var average=sum/3;
+
+document.write("X is " + x + ", Y is " + y + ", and z is " + z + ". <br />");
+document.write("The sum is " + sum + ".<br />");
+document.write("The average is " + average + ".");
+
+//smallest and largest
+if((x<y)&&(x<z))
+smallest=x;
+if((y<x)&&(y<z))
+smallest=y;
+if((z<x)&&(z<y))
+smallest=z;
+
+if((x>y)&&(x>z))
+largest=x;
+if((y>x)&&(y>z))
+largest=y;
+if((z>x)&&(z>y))
+largest=z;
+
+
+window.alert("The smalllest is " + smallest + ". \nThe largest is " + largest + ".");
+</script>
+   </body>
+</html>
+
+<!--
+-->

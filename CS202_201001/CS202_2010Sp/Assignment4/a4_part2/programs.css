@@ -1,0 +1,68 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 5
+   Review Assignment
+
+   Programming Table Style Sheet
+   Author: 
+   Date:   2/17/2010
+
+   Filename:         programs.css
+   Supporting Files: left.jpg, right.jpg, top.jpg, topleft.jpg, topright.jpg 
+
+*/
+
+table.programs{
+	width: 100%;
+	font-family: Trebuchet MS, Arial, Verdanda, sans-serif;
+	border-collapse: collapse;
+	}
+	
+table.programs caption {
+	vertical-align: bottom;
+	font-size: 0.8em;
+	}
+table.programs td{
+	font-size: 0.7em;
+	vertical-align: top;
+	border-left: 1px solid gray; 
+	border-bottom: 1px solid gray;
+	}
+table.programs th{
+	border-bottom: 1px solid gray;
+	height: 25px;
+	}
+table.programs thead{
+	color: white;
+	background-color: rgb(105,177,60);
+	}
+	
+table.programs col.timeColumn{
+	width: 7%;
+	background-color: rgb(215,205,151);
+	background-image: url('left.jpg');
+	background-repeat: repeat-y;
+	background-position: top left;
+	}
+table.programs col.daysColumn{
+	width: 13%;
+	}
+table.programs col.lastColumn{
+	width: 13%;
+	background-color: #fff;
+	background-image: url('right.jpg');
+	background-repeat: repeat-y;
+	background-position: top right;	
+	}
+table.programs thead tr th#topLeft{
+	/*background-color: rgb(105,177,60);*/
+	background-image: url('topleft.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	}
+table.programs thead tr th#topRight{
+	background-color: rgb(105,177,60);
+	background-image: url('topright.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+	}

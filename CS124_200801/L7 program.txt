@@ -1,0 +1,158 @@
+//main.cpp
+#include <iostream>
+#include <string>
+#include "2-5-08 weight.h"
+#include "2-5-08 person.h"
+using namespace std;
+
+
+int main( ) {
+	Weight w;
+	Person p;
+	cout << w << endl;
+	cout << p << endl;
+
+	system("pause");
+	return 0;
+}
+
+/*	OUTPUT
+
+[0lb. 0oz.]
+[[0lb. 0oz.] 0 BigAl]
+Press any key to continue . . .
+
+OUTPUT */
+//end main.cpp
+
+
+//weight.h
+#include <iostream>
+#include <string>
+using namespace std;
+#ifndef WEIGHT
+#define WEIGHT
+
+class Weight {
+	int pounds;
+	int ounces;
+public:
+	Weight();
+	Weight(int, int);
+	Weight(int);
+	
+	Weight& operator++() ;
+	Weight difference(const Weight& w) const;
+	Weight operator+(const Weight& w) const;
+	bool operator>(const Weight& w) const;
+
+	friend ostream& operator<<(ostream& os, const Weight&);
+	friend istream& operator>>(istream& is, Weight&);
+};
+#endif
+//end weight.h
+
+
+//weight.cpp
+#include "2-5-08 weight.h"
+
+Weight::Weight() : pounds(0), ounces(0) { }
+
+Weight::Weight(int p, int o) : pounds(p), ounces(o) { }
+
+Weight::Weight(int p) : pounds(p), ounces(0) { }
+	
+Weight& Weight::operator++() {
+	++ounces;
+	if (ounces == 16) { ++pounds; ounces = 0; }
+	return *this;
+}
+
+Weight Weight::difference(const Weight& w) const {
+	Weight diff;
+	if (ounces < w.ounces) {
+		diff.ounces = ounces + 16 - w.ounces;
+		diff.pounds = pounds - 1 - w.pounds;
+	}
+	else {
+		diff.ounces = ounces - w.ounces;
+		diff.pounds = pounds - w.pounds;
+	}
+	return diff;
+}
+
+Weight Weight::operator+(const Weight& w) const {
+	Weight total;
+	total.ounces = ounces + w.ounces;
+	total.pounds = pounds + w.pounds;
+	if (total.ounces > 15) {
+		++total.pounds;
+		total.ounces = total.ounces - 16;
+	}
+	return total;
+}
+
+bool Weight::operator>(const Weight& w) const {
+	int t1, t2;
+	t1 = pounds * 16 + ounces;
+	t2 = w.pounds * 16 + w.ounces;
+	if (t1 > t2) return true;
+	return false;
+}
+
+ostream& operator<<(ostream& os, const Weight& w) {
+	os << "[" << w.pounds << "lb. " << w.ounces << "oz.]";
+	return os;
+}
+
+istream& operator>>(istream& is, Weight& w) {
+	// input is in the format [pp/oo]
+	char ch;
+	is >> ch; // read the "["
+	is >> w.pounds;
+	is >> ch; // read the "/"
+	is >> w.ounces;
+	is >> ch; // read the "]"
+	return is;
+}
+//end weight.cpp
+
+
+//person.h
+#include "2-5-08 weight.h"
+#ifndef PERSON
+#define PERSON
+
+class Person {
+	Weight weigh;
+	int height;
+	string name;
+public:
+	Person();
+	Person(const Weight&, int, string);
+
+	friend ostream& operator<<(ostream&, const Person&);
+	friend istream& operator>>(istream&, Person&);
+};
+
+#endif
+//end person.h
+
+
+//person.cpp
+#include "2-5-08 person.h"
+
+Person::Person() : weigh(), height(0), name("BigAl") { }
+
+Person::Person(const Weight& w, int h, string n) : weigh(w), height(h), name(n) { }
+
+ostream& operator<<(ostream& os, const Person& p) {
+	os << "[" << p.weigh << " " << p.height << " " << p.name << "]";
+	return os;
+}
+
+istream& operator>>(istream& is, Person& p) {
+	is >> p.name >> p.height >> p.weigh;
+	return is;
+}
+//end person.cpp

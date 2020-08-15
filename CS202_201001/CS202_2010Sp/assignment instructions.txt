@@ -1,0 +1,106 @@
+Assignment 6 comes out of Tutorial 6 from New Perspectives: HTML and XHTML Comprehensive (5th ed.).  It is recommended that you watch the interactive movie tutorial Forms before attempting to read and work through the chapter. 
+
+You can download the files needed for the assignment from Online Companion to HTML and XHTML.
+Assignment 6
+
+    * Part 1: Work through the tutorial in the book completing the items in the tan boxes. The tan boxes start on page 348.
+          o When you have finished, place the files including graphics within a folder called a6_part1.
+
+    * Part 2: Complete the Review Assignment on page 395-398.
+          o When you have finished, place the files within a folder called a6_part2.
+
+Be sure to double check each webpage file to make sure that there are no paths in front of the filenames of your images or linked files.
+
+Once you have completed your work, place copies of the 2 folders (a6_part1 & a6_part2) inside a new folder that you create called Assignment6 and zip the Assignment6 folder. Upload your work through the Assignment Submission tool.
+
+
+
+
+
+
+Assignment 7 comes out of Tutorial 4 from New Perspectives: HTML and XHTML Comprehensive (5th ed.).  It is recommended that you watch the interactive movie tutorial Cascading Style Sheets before attempting to read and work through the chapter. 
+
+You can download the files needed for the assignment from Online Companion to HTML and XHTML.
+Assignment 7
+
+    * Part 1: Work through the tutorial in the book completing the items in the tan boxes. The tan boxes start on page 200.
+          o When you have finished, place the files demo.gif, gloss.htm, print.css, sample.jpg, samples.htm, scraps.css, scraps.jpg, and start.htm within a folder called a7_part1.
+
+    * Part 2: Complete the Review Assignment on pages 257-259.
+          o When you have finished, place the files gallery.htm, print.css, sample1.jpg, sample2.jpg, sample3.jpg, sample4.jpg, scraps.jpg, and screen.css within a folder called a7_part2.
+
+Be sure to double check each webpage file to make sure that there are no paths in front of the filenames of your images or linked files.
+
+Once you have completed your work, place copies of the 2 folders (a7_part1 & a7_part2) inside a new folder that you create called Assignment7 and zip the Assignment7 folder. Upload your work through the Assignment Submission tool.
+
+
+
+
+
+Assignment 8 comes out of Tutorial 7 from New Perspectives: HTML and XHTML Comprehensive (5th ed.).  It is recommended that you watch the interactive movie tutorial Multimedia before attempting to read and work through the chapter. 
+
+You can download the files needed for the assignment from Online Companion to HTML and XHTML.
+Assignment 8
+
+    * Part 1: Work through the tutorial in the book completing the items in the tan boxes. The tan boxes start on page 410.
+          o When you have finished, place the files within a folder called a8_part1.
+
+    * Part 2: Complete the Review Assignment on page 467-469.
+          o When you have finished, place the files within a folder called a8_part2.
+
+    * Part 3: Complete Case Problem #3  (Fractals) on pages 473-474.
+          o When you have finished, place all of the files within a folder called a8_part3.
+
+Be sure to double check each webpage file to make sure that there are no paths in front of the filenames of your images or linked files.
+
+Once you have completed your work, place copies of the 3 folders (a8_part1, a8_part2, a8_part3) inside a new folder that you create called Assignment8 and zip the Assignment8 folder. Upload your work through the Assignment Submission tool.
+
+
+
+
+
+
+
+Assignment 9 comes out of Tutorial 10 from New Perspectives: HTML and XHTML Comprehensive (5th ed.).  IMPORTANT NOTE: We are skipping Tutorial 9, the XHTML chapter.It is recommended that you watch the interactive movie tutorial JavaScript before attempting to read and work through the chapter. 
+
+You can download the files needed for the assignment from Online Companion to HTML and XHTML.
+Assignment 9
+
+    * Part 1: Work through the tutorial in the book completing the items in the tan boxes. The tan boxes start on page 564.
+          o When you have finished, place the files within a folder called a9_part1.
+
+    * Part 2: Complete the Review Assignment on page 605-606.
+          o When you have finished, place the files within a folder called a9_part2.
+
+Be sure to double check each webpage file to make sure that there are no paths in front of the filenames of your images or linked files.
+
+Once you have completed your work, place copies of the 2 folders (a9_part1 & a9_part2) inside a new folder that you create called Assignment9 and zip the Assignment9 folder. Upload your work through the Assignment Submission tool.
+
+
+
+
+
+
+
+For the last assignment, you will use what you have learned to create a web page about yourself. This web page can discuss a favorite hobby interest if you prefer.
+
+You will create this web page using Notepad and you will FTP your web page AND its supporting files (such as images and multimedia) to the bama.ua.edu server.
+
+Your web page must:
+
+   1. Be named index.htm. The filename, index.htm, is the expected filename of a homepage on bama.ua.edu.
+   2. Feature at least 1 paragraph of information.
+   3. Contain at least 3 images.
+   4. Use CSS for formatting. Your page should use a background color, have styles for font-family, and provide at least 1 style for hyperlinks.
+   5. Contain a table.
+   6. Contain hyperlinks to 3 different URLs.
+   7. Feature a mailto: hyperlink that someone could use to send you email.
+   8. Contain a list of at least 4 items.
+   9. Feature background sound.
+  10. Use JavaScript to count the number of days to an event (your birthday, the start of hunting season, a concert, etc) and print this information on the screen.
+
+For information about how to FTP files to a server check out the NEW link on our elearning course homepage in the announcements section.
+
+Your URL will be structured as http://bama.ua.edu/~bamaname where bamaname represents your bama username.
+
+To submit your assignment, create a Word file that has your name, cwid, and the URL to your website on bama.ua.edu. Upload this Word file through the Assignment Submission tool. Merely submitting the webpage files to me will result in a grade no higher than 15% on this assignment.

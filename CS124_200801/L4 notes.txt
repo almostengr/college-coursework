@@ -1,0 +1,28 @@
+a.print
+
+cout << a << endl;
+
+
+OUTPUT
+1st operand is the output stream (cout)
+2nd operand is the actual output
+
+INPUT
+1st operand is the input stream (cin)
+2nd operand is the actual input
+
+
+friend ostream& operator << (ostream&, const Rational&);
+
+friend istream& operator << (istream&, Rational);
+
+ostream& operator << (ostream os, const Rational){
+	os << r.num << "/" << r. den << endl;
+	return os;
+	}
+	
+istream& operator >> (istream is, Rational& r){
+	char ch;
+	is>> r.num >> Ch >> r.den;
+	return is;
+	}

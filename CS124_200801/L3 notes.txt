@@ -1,0 +1,60 @@
+bool isPositive() const{		//const protects the return value
+	if (num*den > 0) return true;
+	return false;
+}
+
+bool isNegative() const{		//const protects the return value
+	if (num*den < 0) return true;
+	return false;
+}
+
+
+Rational operator /(const Rational& r){		//const protects incoming value 
+	Rational temp;
+	temp.num=num*r.den;
+	temp.dem=dem*r.num;
+	temp.reduct();
+	return temp;
+}
+	
+
+
+OVERLOADING ++ FOR POINT 
+	
+int *p1, v1;
+v1 = 0;
+p1 = &v1;
+*p1 = 42;
+
+cout << v1 << endl;
+cout << *p1 << endl;
+
+Output								42
+									42
+									
+									
+									
+	
+	
+>> extraction operator
+<< insertion operator
+:: scope resolution operator
+& reference operator
+++a pre-incremental operator
+a++ post-incremental operator
+* dereferrencing operator
+									
+class Rational{
+private:
+
+public:
+	Rational a(1,2), b(2,3), c;
+	
+	c=a+b;
+	c=a+2;
+	c=2+a;
+	
+	
+	
+	
+										

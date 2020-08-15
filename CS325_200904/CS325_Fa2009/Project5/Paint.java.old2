@@ -1,0 +1,213 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class Paint extends JFrame {
+
+	BlankLabel blanklabel;	//CREATE A NEW BLANKLABEL TYPE OF BLANKLABEL
+
+
+	public Paint() {
+		setTitle("Paint Project 5");
+		setSize(500,500);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+		GridBagLayout gbl = new GridBagLayout();
+		setLayout(gbl);
+
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		
+
+		c.gridx = 0;
+		c.gridy = 0;
+		ToolBar toolbar = new ToolBar();
+		toolbar.addMouseListener(toolbar);	
+		add(toolbar, c);	//DRAWS TOOLBAR
+
+
+		c.gridx = 1;
+		c.gridy = 2;
+		c.gridwidth = 13;
+		BigRectangle canvas = new BigRectangle(Color.white);
+		canvas.addMouseListener(canvas);
+		add(canvas, c);	//DRAWS CANVAS
+
+
+		c.gridx = 1;
+		c.gridy = 0;
+		ToolBar test = new ToolBar();
+		test.addMouseListener(test);
+		add(test,c);
+
+		c.gridx = 0;
+		c.gridy = 1;
+		CurrentColor currentColor = new CurrentColor();
+		currentColor.addMouseListener(currentColor);
+		add(currentColor, c);
+
+
+
+		//START OF DRAWING COLOR PALETTE
+		c.gridx = 1;
+		c.gridy = 1;
+		ColorPalette green = new ColorPalette(Color.green, "Green");	
+		green.addMouseListener(green);
+		add(green, c);
+
+		c.gridx = 2;
+		c.gridy = 1;
+		ColorPalette yellow = new ColorPalette(Color.yellow, "Yellow");
+		yellow.addMouseListener(yellow);
+		add(yellow, c);
+
+		c.gridx = 3;
+		c.gridy = 1;
+		ColorPalette orange = new ColorPalette(Color.orange, "Orange");
+		orange.addMouseListener(orange);
+		add(orange,c);
+
+		c.gridx = 4;
+		c.gridy = 1;
+		ColorPalette black = new ColorPalette(Color.black, "Black");
+		black.addMouseListener(black);
+		add(black,c);
+
+		c.gridx = 5;
+		c.gridy = 1;
+		ColorPalette blue = new ColorPalette(Color.blue, "Blue");
+		blue.addMouseListener(blue);
+		add(blue,c);
+
+		c.gridx = 6;
+		c.gridy = 1;
+		ColorPalette cyan = new ColorPalette(Color.cyan, "cyan");
+		cyan.addMouseListener(cyan);
+		add(cyan,c);
+
+		c.gridx = 7;
+		c.gridy = 1;
+		ColorPalette darkgray = new ColorPalette(Color.darkGray, "darkgray");
+		darkgray.addMouseListener(darkgray);
+		add(darkgray,c);
+
+		c.gridx = 8;
+		c.gridy = 1;
+		ColorPalette lightgray = new ColorPalette(Color.lightGray, "lightgray");
+		lightgray.addMouseListener(lightgray);
+		add(lightgray,c);
+
+		c.gridx = 9;
+		c.gridy = 1;
+		ColorPalette magenta = new ColorPalette(Color.magenta, "magenta");
+		magenta.addMouseListener(magenta);
+		add(magenta,c);
+
+		c.gridx = 10;
+		c.gridy = 1;
+		ColorPalette pink = new ColorPalette(Color.pink, "pink");
+		pink.addMouseListener(pink);
+		add(pink,c);
+
+		c.gridx = 11;
+		c.gridy = 1;
+		ColorPalette red = new ColorPalette(Color.red, "red");
+		red.addMouseListener(red);
+		add(red,c);
+
+		c.gridx = 12;
+		c.gridy = 1;
+		ColorPalette white = new ColorPalette(Color.white, "white");
+		white.addMouseListener(white);
+		add(white,c);
+
+		c.gridx = 13;
+		c.gridy = 1;
+		ColorPalette gray = new ColorPalette(Color.gray, "gray");
+		gray.addMouseListener(gray);
+		add(gray,c);
+		//END OF DRAWING COLOR PALETTE
+
+
+
+	pack();	//RESIZES WINDOW
+	}
+
+	public static void main(String args[]) {
+		Paint e = new Paint();
+	}
+}
+
+
+class Rectangle extends JLabel implements MouseListener {
+ 
+	public Dimension minSize = new Dimension(100,100); 
+		Color bg;
+		String name;
+
+	public Rectangle(Color c, String text) {
+		super(text);
+		bg = c;
+		name = text;
+	}
+
+	public void paint(Graphics g) {
+		g.setColor(bg);
+		g.fillRect(0,0,(int) minSize.getWidth(), (int) minSize.getHeight());
+//		paint(g);
+	}
+
+	public Dimension getMinimumSize() {
+		return minSize;
+	}
+
+	public Dimension getPreferredSize() {
+		return minSize;
+	}
+
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("You clicked " + name + " at " + e.getX() + ", " + e.getY());
+	}
+
+	public void mouseEntered(MouseEvent e) {}
+
+	public void mouseExited(MouseEvent e) {}
+
+	public void mousePressed(MouseEvent e) {}
+
+	public void mouseReleased(MouseEvent e) {}
+}
+
+class ColorPalette extends Rectangle {	
+	public ColorPalette(Color c,String text){
+		super(c,text);
+		bg = c;
+		name = text;
+		minSize = new Dimension(30,100);
+	}
+}
+class BigRectangle extends Rectangle {
+	public BigRectangle(Color c) {
+		super(c,"Canvas");
+		minSize = new Dimension(400,400);
+	}
+}
+
+class ToolBar extends Rectangle{
+	public ToolBar(){
+		super(Color.black, "Toolbar");
+		minSize = new Dimension(100,400);
+	}
+}
+
+class CurrentColor extends Rectangle{
+	public CurrentColor(){
+		super(Color.white,"CurrentColor");	
+		minSize = new Dimension(100,100);
+	}
+}
+
+

@@ -1,0 +1,285 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+//do not alter the function headings to "massage" the project in your favor
+
+class Team{
+private:
+        string name; //school name
+        int harrisPoints; //Harris Points received
+        int coachesPoints; //Coaches' Points received
+        int computerRankings[6]; //array contains each of the 6 computer
+rankings
+        string conference; //conference that the school belongs to
+public:
+        Team(); //constructor, initializes all points to zero
+        void setTeam(string, int, int, int[], string); //sets Team info
+- name, points, conference;
+        void setName(string); //set the Team's name
+        void setHarris(int); //set the Team's Harris Points
+        void setCoaches(int); //set the Team's Coaches' Points
+        void setComputer(int[]); //set the Team's Computer Points
+        void setConference(string); //set the Team's Conference
+        string getName(); //getter for the Team Name
+        int getHarris(); //getter for Harris Points
+        int getCoaches(); //getter for Coaches' Points
+        void getComputer(int[]); //getter for computer points
+        string getConference(); //getter for conference
+        int computerHigh(); //returns highest computer points received
+        int computerLow(); //returns lowest computer points received
+        double bcs(int, int); //computes and returns a Team's BCS score; 2
+        //arguments are total possible harris points and total possible
+coaches points
+        void print(int, int); //prints out Team's information, namely the
+        //points earned in each poll and computer ranking model; 2
+arguments are total
+        //possible harris points and total possible coaches points
+};
+
+//See P7/8 description document for details on the following 8
+void read(Team[], int&, int&);
+void orderBCSRankings(Team[], int, int);
+void printBCSFile(Team[], int, int);
+void printBCSScreen(Team[], int, int);
+char menu();
+void findTeam(string, Team[], int, int);
+void findConference(string, Team[], int, int);
+void orderByPoll(Team[], string);
+void bowlProjections(Team[]); //bonus function
+
+
+int maxHarris;
+int maxCoaches;
+
+char menu(){
+        cout << "2007 Bowl Championship Series Standings\n" << endl;
+
+        cout << "Select an option" << endl;
+
+};
+
+
+//You are given this code -- DO NOT MODIFY MAIN
+int main(){
+        Team bcs_rankings[25];
+        int harris, coaches;
+        char ans = 'y';
+        string locate_team, locate_conference;
+        read(bcs_rankings, harris, coaches);
+        orderBCSRankings(bcs_rankings, harris, coaches);
+        while (ans == 'y'){
+                ans = menu();
+                switch(ans){
+                                                 case '1':
+printBCSFile(bcs_rankings, harris, coaches);
+                                                         break;
+                                                 case '2':
+printBCSScreen(bcs_rankings, harris, coaches);
+                                                         break;
+                                                 case '3': cout<<"Enter
+the name of the team (use underscore in lieu of space): ";
+                                                         cin>>locate_team;
+                                                        
+findTeam(locate_team, bcs_rankings, harris, coaches);
+                                                         break;
+                                                 case '4':
+orderByPoll(bcs_rankings, "Harris");
+                                                         break;
+                                                 case '5':
+orderByPoll(bcs_rankings, "Coaches");
+                                                         break;
+                                                 case '6': cout<<"Enter
+conference: ";
+                                                        
+cin>>locate_conference;
+                                                        
+findConference(locate_conference, bcs_rankings, harris, coaches);
+                                                         break;
+                                                 case '7':
+bowlProjections(bcs_rankings);
+                }
+                if (ans=='4'||ans=='5') orderBCSRankings(bcs_rankings,
+harris, coaches);
+                cout<<endl<<endl<<"Continue?(y/n) ";
+                cin>>ans;
+        }
+
+}
+
+
+void read(Team bcs_rankings[], int& maxHarris, int& maxCoaches )
+{
+
+        string temp;
+        string s;
+        ifstream inFile;
+        inFile.open("bcs.txt");
+
+        inFile >> maxHarris;
+        inFile >> maxCoaches;
+
+        cout << "The maximum Harris poll number from file is " <<
+maxHarris << endl;
+        cout << "The maximum Coaches poll number from file is " <<
+maxHarris << endl;
+
+        //////////////////////////////////////
+        // I am making the assumption that the file will always have 25
+teams.
+        //////////////////////////////////////
+        for( int line=0; line<25; line++ )
+        {
+                // Read in the Team name
+                inFile >> s;      
+                bcs_rankings[line].setName(s);
+
+                // Read in the coaches poll points
+                int points;
+                inFile >> points;
+                bcs_rankings[line].setCoaches(points);
+
+                // Read in the harris poll points
+                inFile >> points;
+                bcs_rankings[line].setHarris(points);
+
+                // Read in the computer poll points
+                int computerPolls[6];
+
+                for(int i=0;i<6;i++){
+                        inFile >> computerPolls[i];
+                }
+                bcs_rankings[line].setComputer(computerPolls);
+
+                // Read in the Conference
+                inFile >> s;
+                bcs_rankings[line].setConference(s);
+
+                inFile.close();
+        }
+}
+
+void orderBCSRankings(Team teams[], int maxHarris, int maxCoaches )
+{
+        ///////////////////////////////////////
+        // Do bubble sort based on BCS rankings.
+        ///////////////////////////////////////
+
+        Team temp;
+
+        for(int i=24;i>=0; i--)
+        {
+                for(int j=1; j<=i; j++)
+                {
+                        if( teams[j-1].bcs(maxHarris,maxCoaches) >
+teams[j].bcs(maxHarris,maxCoaches))
+                        {        
+                                temp = teams[j];
+
+                                teams[j] = teams[j-1];
+                                teams[j-1] = temp;
+                        }
+                }
+        }
+};
+
+void orderByPoll(Team teams[], string poll)
+{
+        ///////////////////////////////////////
+        // Do bubble sort based on Harris rankings.
+        ///////////////////////////////////////
+        if( poll == "Harris" )
+        {    
+                for(int i=24; i>=0; i--)
+                {
+                        for(int j=1; j<=i; j++)
+                        {
+                                if( teams[j-1].getHarris() >
+teams[j].getHarris())
+                                {
+                                        Team team = teams[j];
+
+                                        teams[j] = teams[j-1];
+                                        teams[j-1] = team;              
+                                }
+                        }
+                }
+        }
+
+        ///////////////////////////////////////
+        // Do bubble sort based on Coaches rankings.
+        ///////////////////////////////////////
+        if( poll == "Coaches" )
+        {    
+                for(int i=24;i>=0; i--)
+                {
+                        for(int j=1; j<=i; j++)
+                        {
+                                if( teams[j-1].getCoaches() >
+teams[j].getCoaches())
+                                {
+                                        Team team = teams[j];
+
+                                        teams[j] = teams[j-1];
+                                        teams[j-1] = team;              
+                                }
+                        }
+                }
+        }
+
+        ///////////////////////////////////////
+        // Print out the sorted list to file
+        // and screen.
+        ///////////////////////////////////////
+
+
+
+}
+
+void findTeam(string teamName, Team teams[], int maxHarris, int maxCoaches )
+{
+        for(int i=0;i<25;i++)
+        {
+                if( teamName == teams[i].getName() )
+                {
+                        ///////////////////////////////////////
+                        // Team has been found print out the
+                        // poll data to the screen.
+                        ///////////////////////////////////////
+
+                        return;
+                }
+        }
+
+
+        cout << teamName << "is not in the top 25." << endl;  
+}
+
+void findConference(string conference, Team teams[], int maxHarris, int
+maxCoaches )
+{
+        int found = 0;
+
+        for(int i=0;i<25;i++)
+        {
+
+                if( conference == teams[i].getConference() )
+                {
+                        ///////////////////////////////////////
+                        // Conference has been found print out the
+                        // poll data to the screen.
+                        ///////////////////////////////////////
+
+                        found = 1;
+                }
+        }
+
+
+        if( found == 0 )
+                cout << conference << "does not have any teams in the
+top 25." << endl;  
+
+
+}
+

@@ -1,0 +1,2 @@
+0 9-17 * * 1-5 ~/Tools/Backup
+58 18 * 9-12 1 ~/Tools/record -channel 6 -duration 64 -title House

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- 
+	
+	MIS 320
+	March 8, 2011
+	Assignment 7
+	-->
+	<title>Miles and Matthew's Lemonade Stand</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="" />
+	<meta name="title" content="Miles and Matthew's Lemonade Stand" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div id="pageContainer">
+    <div id="headerTop">&nbsp;</div>
+    <div id="header" class="center">
+        <div id="logocontainer">
+            <img src="logo.jpg" alt="Miles and Matthew Logo" width="250" height="178" />
+        </div>
+        <br />Miles and Matthew's<br />Lemonade Stand 
+    </div>
+    <div id="headerBottom">&nbsp;</div>
+    <div class="pageItemContainer">
+        <h3 class="center">Drink Menu</h3>
+        <table>
+            <tr>
+                <th>Drinks</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Lemonade</td>
+                <td>$1.00</td>
+            </tr>
+            <tr>
+                <td>Pink Lemonade</td>
+                <td>$2.00</td>
+            </tr>
+            <tr>
+                <td>Grapefruit</td>
+                <td>$.50</td>
+            </tr>
+        </table>
+    </div>
+    <form action="" method="get" id="orderform" name="orderform" target="_blank">
+        <h3 class="center">Place An Order</h3>
+        Drink Type:<br />
+        <select name="drinkType" id="drinkType">
+            <option value="">-Select A Drink-</option>
+            <option value="lemonade">Lemonade ($1.00)</option>
+            <option value="pink_lemonade">Pink Lemonade ($2.00)</option>
+            <option value="grapefruit">Grapefruit ($.50)</option>
+        </select> 
+        <br /><br />        
+        Quantity:<br />
+        <input type="text" name="quantity" size="10" />
+        <br /><br />        
+        <input type="button" onclick="calculate();" value="Calculate" />        
+        <div style="text-align: right;">
+            <strong>Sub-Total:</strong>
+            $<input type="text" name="subtotal" value="0.00" size="10" /><br /><br />            
+            <strong>Tax: </strong>
+            $<input type="text" name="tax" value="0.00" size="10" /><br /><br />            
+            <strong>Total: </strong>
+            $<input type="text" name="total" value="0.00" size="10" /><br /><br />
+        </div>
+    </form>
+    <div id="footer">
+    Copyright &copy; Miles and Matthew's Lemonade Stand<br />
+    <script type="text/javascript">last_updated();</script>
+    </div>
+</div>
+</body>
+</html>

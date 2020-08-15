@@ -1,4 +1,4 @@
-//Kenneth Robinson
+//
 //Date Feb. 2, 2006
 //CIS 251
 //Assignment 2

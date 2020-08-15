@@ -1,0 +1,54 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Additional Cases
+   Case 1
+
+   Young Notes Style Sheet
+   Author: 
+   Date:    
+
+   Filename:         ystyles.css
+   Supporting Files: none
+
+*/
+
+*                        {margin: 0px; padding: 0px}
+body                     {font-size: 14px; 
+                          font-family: 'Lucida Grande', Verdana, sans-serif}
+
+#pageContent             {width: 780px; margin: 10px 0px 0px 15px}
+
+
+#links                   {list-style-type: none; margin-top: 5px}
+#links li                {float: left; width: 19%; text-align: center;
+                          border: 1px solid rgb(68, 76, 169); margin: 5px 2px 15px 2px}
+#links li a              {display: block; color: rgb(68, 76, 169); text-decoration: none;
+                          background-color: white}
+#links li a:hover        {color: white; background-color: rgb(68,76,169)}
+
+
+h2                       {font-size: 20px; font-weight: normal; letter-spacing: 5px;
+                          color: rgb(68, 76, 169); margin-top: 15px}
+ 
+h3                       {font-size: 16px; font-weight: normal; letter-spacing: 5px;
+                          color: rgb(68, 76, 169); margin-top: 15px}
+
+p                        {margin: 7px}
+
+#main                    {border-top: 2px solid rgb(68, 76, 169); 
+                          border-bottom: 2px solid rgb(68, 76, 169)}
+
+#main ul                 {list-style-type: circle; margin-left: 50px; font-size: 12px;
+                          margin-top: 15px; margin-bottom: 15px}
+
+#main ul li              {margin-bottom: 10px}
+
+#main ul li strong       {font-weight: normal; color: rgb(68,76,169)}
+
+
+address                  {font-style: normal; font-size: 10px; text-align: center;
+                          padding: 5px; clear: all}
+
+
+/* newly-added styles */
+

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--  October 17, 2008-->
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Welcome</title>
+   </head>
+
+   <body>
+     <script type="text/javascript">
+
+var my_num1=window.prompt("Enter the first number");
+
+var my_num2=window.prompt("Enter the second number");
+
+my_num1=parseInt(my_num1);
+my_num2=parseInt(my_num2);
+
+//is num2 a multiple of num 1?
+
+var remainder=my_num2%my_num1;
+
+if(remainder==0)
+document.write(my_num1+" is a multiple of "+ my_num2);
+
+if(remainder!=0)
+document.write(my_num1+" is not a multiple of "+ my_num2);
+
+
+
+</script>
+   </body>
+</html>
+

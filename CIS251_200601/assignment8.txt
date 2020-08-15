@@ -609,7 +609,7 @@ Do you want to track the seats again (Y/N)? n
 End of Program!
 Press any key to continue . . .
 
-/*	Kenneth Robinson
+/*	
 	Assignment 8
 	CIS 251
 	April 13, 2006

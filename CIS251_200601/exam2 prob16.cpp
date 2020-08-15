@@ -1,4 +1,4 @@
-//Kenneth Robinson
+//
 #include <iostream>
 using namespace std;
 void problem16();
@@ -30,7 +30,7 @@ PersonPtr student;
 
 student = new person;
 
-strcpy( student->name, "Kenneth Robinson");
+strcpy( student->name, "");
 student->age = 20;
 }
 

@@ -1,0 +1,41 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 9
+   Case Problem 3
+
+   Travel Scotland Web Site
+   Author: 
+   Date:   
+
+   Filename:         scotland.htm
+   Supporting files: casttour.htm, hebdtour.htm, hightour.htm, laketour.htm, 
+                     tourlist.gif, tslogo.gif
+-->
+   <title>Tour Scotland</title>
+   <style type="text/css">
+      body {background-color: black; color: white}
+   </style>
+</head>
+
+<body>
+<p align="center">
+   <img src="tslogo.gif" alt="Tour Scotland">
+   <br>
+   Explore Scotland by joining us on one of our four tours listed below.
+   <br><br>
+   <iframe src="laketour.htm" width="600" height="200" name="tours">
+   </iframe>
+   <br><br>
+   <img src="tourlist.gif" usemap="#tourmap" border="0" alt="">
+   <map name="tourmap">
+      <area shape="rect" coords="17,0,158,59" href="laketour.htm" target="tours">
+      <area shape="rect" coords="159,0,306,59" href="casttour.htm" target="tours">
+      <area shape="rect" coords="307,0,454,59" href="hightour.htm" target="tours">
+      <area shape="rect" coords="455,0,593,59" href="hebdtour.htm" target="tours">
+   </map>
+</p>
+</body>
+
+</html>

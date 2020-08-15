@@ -1,0 +1,44 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 7
+   Case Problem 3
+
+   Fractal Math Style Sheet
+
+   Filename:         fstyles.css
+   Supporting Files: fback.jpg
+
+
+*/
+
+body {background: white url(fback.jpg) no-repeat top left; margin: 0px; padding: 0px}
+#head {position: absolute; top: 18px; left: 219px}
+#pageContent {position: absolute; top: 120px; left: 0px}
+
+#links {float: left; width: 150px; font-size: 16px}
+#links ul {padding-left: 0px; margin-left: 10px; list-style-type: none}
+#links a {text-decoration: none; color: black}
+#links a:visited {text-decoration: black}
+#links a:hover {text-decoration: underline}
+#links li.newTopic {margin-top: 15px}
+
+#mainColumn {float: left; width: 590px}
+
+.first-p:first-line {font-variant: small-caps}
+
+#movie {float: right; margin: 0px 0px 10px 15px}
+
+#fractal {font-size: 10px; font-family: sans-serif; border: 1px solid blue; 
+          margin: 10px; width: 550px; background-color: rgb(243,224,233)}
+
+#fractal h2 {margin: 10px; text-align: center; font-size: 14px; color: white;
+            font-weight: normal; background-color: blue; margin: 0px; line-height: 2}
+
+#fractal li {list-style-type: circle; margin-left: 0px; padding-left: 0px; 
+             line-height: 2.2}
+
+#fractal span {border: 2px outset rgb(236,233,216); font-family: sans-serif; font-size: 10px; 
+               padding: 2px; background-color: rgb(236,233,216); margin: 5px}
+
+#cite {font-size: 10px; text-align: right}
+#demo {text-align:center}

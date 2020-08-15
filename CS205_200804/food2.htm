@@ -1,0 +1,82 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- November 7, 2008 -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Beat Auburn, Beat Hunger Donations</title>
+   </head>
+
+   <body>
+
+<script type="text/javascript">
+
+var collection_points=0;
+
+var item = window.prompt("Enter the number of items or -1 to exit");
+
+item=parseInt(item);
+
+var item_total_alabama=0;
+
+var item_total_auburn = 0;
+
+var weight_total_alabama = 0;
+
+var weight_total_auburn = 0;
+
+
+while(item != -1) {
+
+	var weight =window.prompt("Enter the total weight");
+
+	weight=parseInt(weight);
+
+	var university = window.prompt("Enter 1 for Alabama or 2 for Auburn");
+	
+	university=parseInt(university);
+
+	if(university == 1){
+
+		item_total_auburn = item_total_alabama + item
+
+		weight_total_alabama = weight_total_alabama + weight;
+	}
+	if(university == 2){
+			
+		item_total_auburn = item_total_auburn + item;
+	
+		weight_total_auburn = weight_total_auburn + weight;
+	}
+
+
+	collection_points++;
+
+	item = window.prompt("Enter the number of items or -1 to exit");
+
+	item=parseInt(item);
+
+}
+
+
+
+if(weight_total_auburn > weight_total_alabama){
+	document.write("Auburn Wins!");
+}
+if(weight_total_alabama > weight_total_auburn){
+	document.write("Alabama Wins!");
+}
+
+
+document.write("<br />The total weight for Alabama is " + weight_total_alabama);
+
+document.write("<br />The total weight for Auburn is " + weight_total_auburn);
+
+</script>
+   </body>
+</html>
+
+<!--
+-->

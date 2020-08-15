@@ -1,0 +1,11 @@
+﻿Rulers,1.25
+Erasers,.50
+Pencils,.75
+Pens,1.50
+File Folders,2.00
+Notebooks,3.25
+Paper,1.75
+Glue,.50
+Tape,.25
+Staples,1.00
+Stapler,3.00

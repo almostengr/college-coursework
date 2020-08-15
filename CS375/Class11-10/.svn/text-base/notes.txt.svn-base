@@ -1,0 +1,21 @@
+Ways to implement buttson
+enum A{
+	SMALL_SQ_BUTTON = 0;
+	LARGE_SQ_BUTTON;
+}
+
+created a class
+each other class inherits from that class
+
+
+abstract classBrush{
+	public doIt(int x, int y);
+}
+
+Make an interface
+interface Brushable{
+	
+	public void doIt();
+	
+	public String toString();
+}

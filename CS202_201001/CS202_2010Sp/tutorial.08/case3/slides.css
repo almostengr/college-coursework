@@ -1,0 +1,27 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 8
+   Case Problem 3
+
+   SkyWeb Slides Style Sheet
+
+   Filename:         slides.css
+   Supporting Files: none
+
+*/
+
+*              {padding: 0px; margin: 0px}
+body           {color: black}
+#slidebox      {width: 460px}
+h1             {font-family: monospace; text-align: center; font-size: 20px;
+                font-weight: bold}
+
+#messimg       {float: left; border-width: 0px}
+#messdesc      {float: left; border-width: 0px}
+
+#buttons       {clear: left; width: 100%; text-align: center; padding-top: 15px}
+#buttons img   {border-width: 0px; margin: 0px 10px}
+
+
+
+

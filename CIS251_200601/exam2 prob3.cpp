@@ -1,4 +1,4 @@
-//Kenneth Robinson
+//
 
 #include <iostream>
 #include <iomanip>

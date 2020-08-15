@@ -1,0 +1,30 @@
+A list of ActiveX class ids and codebases for various ActiveX controls
+
+
+Flash Shockwave player
+class id   D27CDB6E-AE6D-11cf-96B8-444553540000
+codebase   http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0
+
+
+
+QuickTime player
+class id   02BF25D5-8C17-4B23-BC80-D3488ABDDC6B
+codebase   http://www.apple.com/qtactivex/qtplugin.cab
+
+
+
+RealAudio player	
+class id   CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA
+codebase   none
+
+
+
+Windows Media Player
+class id   6BF52A52-394A-11d3-B153-00C04F79FAA6
+codebase   http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,5,715
+
+
+
+Java
+class id   8AD9C840-044E-11D1-B3E9-00805F499D93
+codebase   http://java.sun.com/update/1.6.0/jinstall-6-windows-i586.cab

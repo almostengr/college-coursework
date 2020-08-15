@@ -1,0 +1,53 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 8
+   Review Assignment
+
+   Cliffhangers Style Sheet
+
+   Filename:         chs.css
+   Supporting Files: 
+
+*/
+
+*                    {padding: 0px; margin: 0px}
+body                 {background-image: url(back1.jpg); 
+                      font-family: Verdana, Geneva, sans-serif; font-size: 14px}
+#pageContent         {width: 720px; position: absolute; top: 15px; left: 15px}
+h2                   {font-size: 24px; letter-spacing: 5px; font-weight: normal; 
+                      color: rgb(157, 87, 89); margin: 0px 0px 15px 0px}
+h4                   {font-size: 18px; letter-spacing: 3px; font-weight: normal; 
+                      color: rgb(157, 87, 89); margin: 10px 0px 10px 0px}
+
+p                    {margin-bottom: 10px}
+#firstp:first-line   {font-variant: small-caps}
+#firstp:first-letter {float: left; font-size: 400%; line-height: 0.8; margin: 0px 5px 0px 0px;
+                      font-family: 'Times New Roman', serif; color: rgb(157, 87, 89)}
+
+#leftCol             {position: absolute; top: 45px; left: 0px; width: 385px}
+#leftCol p           {font-size: 10px; text-align: center}
+#rightCol            {position: absolute; top: 45px; left: 390px}
+
+
+ul                   {list-style: circle url(redball.jpg); margin-left: 20px; 
+                      margin-bottom: 15px}
+
+table.course         {font-size: 12px}
+table.course th      {text-align: left; color: rgb(157, 87, 89); font-weight: normal; 
+                      width: 120px}
+
+table.tours          {font-size: 14px; border-collapse: collapse; background-color: white; 
+                      border: 5px solid rgb(219,175,175)}
+table.tours td, table.tours th 
+                     {padding: 5px; border: 1px solid rgb(157, 87, 89)}
+table.tours th       {text-align: left; color: rgb(157, 87, 89); font-weight: normal; 
+                      width: 180px; background-color: ivory}
+
+table.staff          {font-size: 14px; border-collapse: collapse; background-color: white; 
+                      border: 5px solid rgb(219,175,175)}
+table.staff td, table.staff th 
+                     {padding: 5px; border: 1px solid rgb(157, 87, 89)}
+table.staff th       {text-align: left; color: rgb(157, 87, 89); font-weight: normal; 
+                      width: 120px; background-color: ivory}
+
+

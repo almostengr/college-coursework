@@ -1,0 +1,26 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Additional Cases
+   Case 1
+
+   Young Notes Biography Style Sheet 
+
+   Filename:         biostyles.css
+   Supporting Files: none
+
+*/
+
+*                        {margin: 0px; padding: 0px}
+body                     {font-size: 14px; background-color: ivory;
+                          font-family: 'Lucida Grande', Verdana, sans-serif}
+
+
+h1, h2                   {font-weight: normal; letter-spacing: 5px;
+                          color: rgb(68, 76, 169)}
+h1                       {font-size: 20px; border-bottom: 1px solid black}
+h2                       {font-size: 14px}
+p                        {margin: 7px; font-size: 12px}
+
+#bioContent              {margin: 10px}
+
+#bioContent img          {float: right; margin: 0px 0px 10px 10px}

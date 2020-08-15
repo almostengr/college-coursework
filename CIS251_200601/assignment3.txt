@@ -1,4 +1,4 @@
-// Author: Kenneth Robinson
+// Author: 
 // Date: Feb 16, 2006
 // CIS-251
 

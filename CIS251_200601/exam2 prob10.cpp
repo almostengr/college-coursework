@@ -1,4 +1,4 @@
-//Kenneth Robinson
+//
 #include <iostream>
 #include <fstream> // I/O
 using namespace std;

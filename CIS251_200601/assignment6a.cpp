@@ -1,5 +1,5 @@
 /*
-	Kenneth Robinson
+	
 	CIS 251
 	March 14, 2006
 	Assignment 6

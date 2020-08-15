@@ -1,0 +1,19 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 8
+   Review Assignment
+
+   Cliffhangers Style Sheet
+
+   Filename:         footer.css
+   Supporting Files: back3.jpg
+
+*/
+
+body             {background-image: url(back3.jpg); font-family: Verdana, Geneva, sans-serif; 
+                  font-size: 14px}
+
+div              {text-align: center; line-height: 2}
+a                {color: white; text-decoration: none}
+a:visited        {color: white}
+a:hover          {color: white; text-decoration: underline}

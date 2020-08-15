@@ -1,0 +1,31 @@
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// THIS IS THE THIRD FILE, save it in menu.rc
+// 
+// to edit this file, right click it and select "Open With" and then select "Source Code (Text) Editor"
+// If there is any initial text in the menu.rc file, simply delete it (replace it with the code below)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <afxres.h>
+#include "menuIDs.h"
+
+Example MENU
+{
+	POPUP "File"
+	{
+		MENUITEM "Instructions", IDM_INSTRUCTIONS
+		MENUITEM "Exit", IDM_EXIT
+	}
+	POPUP "Colors"
+	{
+		MENUITEM "Green", IDM_GREEN
+		MENUITEM "Blue", IDM_BLUE
+		MENUITEM "Red", IDM_RED
+		MENUITEM "Black", IDM_BLACK
+	}
+	POPUP "About"
+	{
+		MENUITEM "About", IDM_ABOUT
+	}
+}

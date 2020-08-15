@@ -1,0 +1,141 @@
+
+/*
+*CALLED THE SINGLETON PATTERN
+*/
+
+Class Paint(){
+	Paint(){
+	}
+
+	Paint instance = null;	//to get a copy of the instance
+}
+
+public static void main(Strings args[]){
+	Paint p = new Paint();
+}
+
+public static Paint getInstance(){
+//can be called without giving an instance of the object
+
+	//return new Paint();
+	
+	if(instance == null){
+		instance == new Paint();
+	
+	return instance;
+
+	//CALLED THE SINGLETON PATTERN
+
+		
+
+}
+
+
+class B{
+	B(){
+		Paint p = Paint.getInstance();
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+*DOING ABSTRACT CLASS DOING A BRUSH 
+*/
+
+abstract class brush{
+	abstract void draw (int x, int y, Graphics g);
+	
+	/*
+	public String String(){
+		return "I'm a brush";
+	}
+	*/
+
+	//DO THE ABOVE OR THE BELOW
+}
+
+interface Brushable{
+	void draw(int x, int y, Graphics g);
+}
+
+class SquareBrush extends Brush{
+	void draw (int x, int y, Graphics g){
+		g.fillRect(x,y,10,10);
+	}
+
+	//IF USING INTERFACE BRUSHABLE, THEN WOULD REPLACE THE DRAW FUNCTION WITH BRUSHABLE INTERFACE
+}
+
+Brushable br = new SquareBrush();	//the way to call a new interface
+
+
+//cannot creat an instance of an abstract class, but can do 
+Brush b = new Brush(){
+}
+
+
+
+
+
+
+
+
+TEST NOTES - TEST NOTES - TEST NOTES - TEST NOTES
+graphics
+
+!double buffering - writing to an image and then write the image to the screen; prevents flicker
+
+shapes - 
+
+awt library - contains the graphics 
+
+swing library - Jframe, Jlabel
+
+use repaint to make the screen; part of the java.awt.event package
+
+
+!EVENTS: 
+Event interfaces: mouseclicked - mouselistener, mousedragged-mousemotionlistener
+
+add listeners: mouse listeners, keyboard listeners, file listeners
+
+
+!THREADS:
+two threads using the same variable can be over written 
+
+used snychronized - if two threads that are trying to use a method, only one can access it at at time. 
+
+to create a thread, you have to extend it or create a runnable 
+
+
+EXTENDS AND IMPLMENTS
+
+
+
+INHERITANCE:
+abstract classes
+
+interfaces
+
+!scanner - reading data from files; it has a library
+
+
+!EXCEPTIONS
+throw 
+
+catch
+
+to create an exception, you inherit from an exception
+
+
+JAVADOCS

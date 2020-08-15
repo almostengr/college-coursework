@@ -1,4 +1,4 @@
-/*	Kenneth Robinson
+/*	
 	CIS 251
 	Assignemnt 9
 	April 25, 2006

@@ -1,0 +1,61 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- November 7, 2008 -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Beat Auburn, Beat Hunger Donations</title>
+   </head>
+
+   <body>
+
+<script type="text/javascript">
+
+var collection_points=0;
+
+var item = window.prompt("Enter the number of items or -1 to exit");
+
+item=parseInt(item);
+
+var item_total = 0;
+
+var weight_total = 0;
+
+var average_weight;
+
+while(item != -1) {
+
+	var weight =window.prompt("Enter the total weight");
+
+	weight=parseInt(weight);
+
+	weight_total = weight_total + weight;
+	
+	item_total = item_total + item;
+	
+	collection_points++;
+
+	item = window.prompt("Enter the number of items or -1 to exit");
+
+	item=parseInt(item);
+
+}
+
+average_weight = weight_total / collection_points;
+
+document.write('The average Weight is ' + average_weight);
+
+document.write('<br />The total number of items is ' + item_total);
+
+document.write('<br />The total weight is ' + weight_total);
+
+document.write('<br />The total number of collection points is ' + collection_points);
+
+</script>
+   </body>
+</html>
+
+<!--
+-->

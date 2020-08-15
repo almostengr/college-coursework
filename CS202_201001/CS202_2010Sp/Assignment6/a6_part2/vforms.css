@@ -1,0 +1,80 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 6
+   Review Assignment
+
+   Volunteer Form Style Sheet
+   Author: 
+   Date:   2/23/2010
+
+   Filename:         vforms.css
+   Supporting Files: none
+
+*/
+
+fieldset{
+	background-color: rgb(237,233, 223);
+	padding: 10px;
+	margin-bottom: 10px;
+	}
+span{
+	color: #ff0000;
+	}
+label.blockLabel{
+	display: block;
+	width: 450px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+label.blockLabel input{
+	position: absolute;
+	left: 140px; 
+	}
+#fName, #lName{	
+	width: 250px;
+	}
+#street1, #street2{	
+	width: 350px;
+	}
+#phone, #city{
+	width: 150px;
+	}
+#state{
+	width: 40px;
+	}
+#zip{	
+	width: 80px;
+	}
+fieldset#experience{	
+	width: 450px;
+	padding: 5px;
+	}
+fieldset#interestFields{	
+	position: relative;
+	width: 450px;
+	height: 120px;
+	padding: 5px;
+	}
+#interest1, #interest2, #interest3, #interest4, #interest5, #interest6, #interest7, #interest8, #interest9{
+	position: absolute;
+	}
+#interest1, #interest2, #interest3{	
+	top: 20px;
+	}
+#interest4, #interest5, #interest6{
+	top: 50px;
+	}
+#interest7, #interest8, #interest9{	
+	top: 80px;
+	}
+#interest1, #interest4, #interest7{	
+	left: 0px;
+	}
+#interest2, #interest5, #interest8{
+	left: 140px;
+	}
+#interest3, #interest6, #interest9{
+	left: 280px;
+	}

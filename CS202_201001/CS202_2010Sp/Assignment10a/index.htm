@@ -1,0 +1,131 @@
+﻿<!--
+
+For the last assignment, you will use what you have learned to create a web page about yourself. This web page can discuss a favorite hobby interest if you prefer.
+
+You will create this web page using Notepad and you will FTP your web page AND its supporting files (such as images and multimedia) to the bama.ua.edu server.
+
+Your web page must:
+
+Be named index.htm. The filename, index.htm, is the expected filename of a homepage on bama.ua.edu. 
+Feature at least 1 paragraph of information. 
+Contain at least 3 images. 
+Use CSS for formatting. Your page should use a background color, have styles for font-family, and provide at least 1 style for hyperlinks. 
+Contain a table. 
+Contain hyperlinks to 3 different URLs. 
+Feature a mailto: hyperlink that someone could use to send you email. 
+Contain a list of at least 4 items. 
+Feature background sound. 
+Use JavaScript to count the number of days to an event (your birthday, the start of hunting season, a concert, etc) and print this information on the screen. 
+For information about how to FTP files to a server check out the NEW link on our elearning course homepage in the announcements section.
+
+Your URL will be structured as http://bama.ua.edu/~bamaname where bamaname represents your bama username.
+
+To submit your assignment, create a Word file that has your name, cwid, and the URL to your website on bama.ua.edu. Upload this Word file through the Assignment Submission tool. Merely submitting the webpage files to me will result in a grade no higher than 15% on this assignment.
+
+
+-->
+
+<html>
+<head>
+	<title> </title>
+	<style type="text/css">
+		body{
+			background-color: #000000;
+			color: #ffffff;
+			font-family: times new roman, sans-serif;
+		}
+		a:link{
+			color: #ffffff;
+		}
+		a:active, a:visited{
+			color: #cccccc;
+		}
+		p{
+			text-align: center;
+		}
+		table, td{
+			color: #ffffff;
+		}
+	</style>
+	
+</head>
+<body>
+
+
+<p style="width: 500px;">Located along the banks of the Black Warrior River in west-central Alabama, Tuscaloosa is led by a Mayor/Council form of government and is home to approximately 89,000 residents as well as a thriving business community. In the words of Mayor Walter Maddox, we welcome  you  to absolutely  the  best city in the nation and one of its most progressive communities. 
+<br /><span style="font-weight: bold">Source:</span> City of Tuscaloosa Website</p>
+
+<p>
+<a href="mailtto:cdwells1@crimson.ua.edu">Email Me</a>
+</p>
+
+<img src="river.jpg" alt="Black Warrior River" /><br />
+
+
+
+<table>
+	<tr>
+		<td>
+			<a href="http://en.wikipedia.org/wiki/Tuscaloosa,_Alabama">Wikipedia entry about Tuscaloosa</a>
+		</td>
+		<td>
+			<a href="http://www.tuscaloosa.com">Tuscaloosa Website</a>
+		</td>
+		<td>
+			<a href="http://www.tuscaloosachamber.com/">Tuscaloosa Chamber of Commerce</a>
+		</td>
+	</tr>
+</table>
+
+<img src="fireworks2.jpg" alt="Fireworks" width="405" height="289" /><br />
+
+
+<ul>
+	<li>January</li>
+	<li>February</li>
+	<li>March</li>
+	<li>April</li>
+	<li>May</li>
+	<li>June</li>
+	<li>July</li>
+	<li>August</li>
+	<li>September</li>
+	<li>October</li>
+	<li>November</li>
+	<li>December</li>
+</ul>
+
+
+<script type="text/javascript">
+
+var holidayString="Christmas Day"
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+function countdownToDate(yr,m,d){
+     var whatsToday=new Date();
+     var currentDate=whatsToday.getYear();
+     if (currentDate< 1000){
+	     currentDate+=1900;
+	     }
+     var currentDateMonth=whatsToday.getMonth();
+     var currentDateDay=whatsToday.getDate();
+     var todaystring=montharray[currentDateMonth]+" "+currentDateDay+", "+currentDate;
+     var futurestring=montharray[m-1]+" "+d+", "+yr;
+     var difference=(Math.round((Date.parse(futurestring)-Date.parse(todaystring))/(24*60*60*1000))*1);
+     if (difference>0){
+	     document.write("Only " + difference + " days until " + holidayString);
+	     }
+}
+//enter the count down date using the format year/month/day
+countdownToDate(2010,12,25)
+</script>
+
+<br />
+
+
+<img src="rbc.jpg" alt="RBC Bank Building, Downtown Tuscaloosa" /><br />
+
+
+
+</body>
+</html>

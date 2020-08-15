@@ -1,4 +1,7 @@
-.project
-.classpath
+*.project
+*.classpath
 bin*
 obj*
+*.settings
+Debug*
+*.class*

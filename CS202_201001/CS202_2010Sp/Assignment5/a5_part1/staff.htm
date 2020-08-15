@@ -1,0 +1,30 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 8
+   Tutorial Case
+
+   Cliff Hangers Staff
+   Author: 
+   Date:   
+
+   Filename:         staff.htm
+   Supporting files: bester.htm, head.htm, photos.htm
+-->
+<title>Cliff Hangers Staff</title>
+</head>
+
+<frameset rows="85,*">
+   <!-- Company logo -->
+   <frame src="head.htm" marginheight="0" noresize="noresize" scrolling="no" name="LOGO" />
+   <!-- Nested frames -->
+   <frameset cols="140,*">
+      <!-- A list of staff photos -->
+      <frame src="photos.htm" marginheight="1" marginwidth="10" name="Photos" />
+      <!-- Individual staff biographies -->
+      <frame src="bester.htm" name="Bios" />
+   </frameset>
+</frameset>
+
+</html>

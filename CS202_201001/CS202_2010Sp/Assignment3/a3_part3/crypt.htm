@@ -1,0 +1,89 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 3
+   Case Problem 1
+
+   ICI Home Page
+   Author:           
+   Date:   2/16/2010
+
+   Filename:         crypt.htm
+   Supporting files: back1.gif, back2.gif, locks.jpg, logo.gif, scytale.gif
+-->
+
+   <title>International Cryptographic Institute</title>
+   <style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+			background-image: url('back1.gif');
+			background-repeat: repeat-y;
+			margin: 0px 0px 0px 0px;
+			}
+		#boldYellow{
+			font-weight: bold;
+			color: yellow;
+			}
+		#indentParagraph{
+			text-indent: 2em;
+			}
+   </style>
+</head>
+
+<body>
+   <div id="logo">
+      <img src="logo.gif" alt="ICI" width="95" height="78" style="float: left;" />
+   </div>
+
+   <div id="pageContent" style="width: 670px; margin-left: 100px; font-family: Arial, Helvetica, sans-serif">
+   <h1 style="font-family: Courier New, monospace; font-size: 24pt; letter-spacing 10pt; line-height: 0.7pts; text-align: center; color: yellow; background-image: url('back2.gif'); margin: 0px 0px 0px 0px;">
+      THE&nbsp;<br />
+      SCIENCE<br />
+      &nbsp;&nbsp;OF<br />
+      CRYPTOGRAPHY
+   </h1>
+
+   <h2>What is Cryptography?</h2>
+
+   <p><b>Cryptography</b> is the science of secure communications, 
+      formed from the Greek words <i>krypt&#243;s</i> meaning "hidden" 
+      and <i>l&#243;gos</i>, meaning "word." The first recorded use of cryptography 
+      was by the Spartans who as early as 400 BC employed a cipher device called a 
+      scytale to send secret communications between military 
+      commanders. The scytale consisted of a tapered baton around which was wrapped 
+      a piece of parchment inscribed with the message. Once unwrapped the parchment 
+      appeared to contain an incomprehensible set of letters; however when wrapped 
+      around another baton of identical size the original text appears.
+      <img src="scytale.gif" alt="image" width="250" height="69" style="float: right;" />
+   </p>
+
+   <p style="border-bottom: 2px solid yellow; padding-bottom: 10px;">Cryptographers developed more and more ingenious systems, 
+      but it was in the 20<sup>th</sup> Century that the science of cryptography took 
+      off. The first major achievement was the development of rotor cipher machines. 
+      An American, Edward Hebern recognized that by hardwiring alphabetic substitution in 
+      the connections from one side of an electrical rotor to those on the other side and 
+      cascading a collection of such rotors, alphabetic substitutions of almost any 
+      complexity could be produced. German engineers independently discovered the rotor 
+      concept and designed the precursors to the most famous cipher machine in history
+      &ndash; the German Enigma machine which was used during World War II. The cracking 
+      of the Enigma ciphers by British and Polish cryptanalysts is one of the
+      greatest triumphs in the history of cryptography and played an important role in 
+      the Allied victory.
+   </p>
+
+   <p>To learn more cryptography, please tour our site.<br />
+      <img usemap="#lockMap" src="locks.jpg" alt="lock links" width="510" height="110" style="border-width: 0px;" />
+	  <map name="lockMap">
+		<area shape="circle" coords="52,52,43" href="history.htm" alt="History" />
+		<area shape="circle" coords="155,52,43" href="enigma.htm" alt="Enigma" />
+		<area shape="circle" coords="255,52,43" href="algo.htm" alt="Algorithms" />
+		<area shape="circle" coords="355,52,43" href="single.htm" alt="Single Key" />
+		<area shape="circle" coords="455,52,43" href="public.htm" alt="Public Key" />
+	  </map>
+   </p>
+   </div>
+
+</body>
+</html>

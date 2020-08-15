@@ -1,4 +1,4 @@
-/*	AUTHOR: Kenneth Robinson
+/*	AUTHOR: 
 	ASSIGNMENT: 6 
 	CIS 215
 	DATE: March 27, 2006

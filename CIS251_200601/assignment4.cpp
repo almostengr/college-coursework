@@ -1,4 +1,4 @@
-/*	 Author: Kenneth Robinson
+/*	 Author: 
 	Assignment 4
 	CIS 251
 */

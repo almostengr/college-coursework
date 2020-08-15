@@ -1,0 +1,147 @@
+﻿<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 7
+   Case Problem 3
+
+   Exploring the World of Fractals   
+   Author: Carl Wells
+   Date:   March 25th, 2010
+
+   Filename:         fractal.htm
+   Supporting files: Cmpx.class, Controls.class, fback.jpg, flogo.jpg,
+                     FracPanel.class, fstyles.css, Mandel.class, mandel.swf
+-->
+<title>Exploring the World of Fractals</title>
+<link href="fstyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="head"><img src="flogo.jpg" alt="Exploring the World of Fractals" /></div>
+
+<div id="pageContent">
+
+   <div id="links">
+      <ul>
+         <li><a href="#">Home</a></li>
+         <li class="newTopic"><a href="#">Pre-Algebra</a></li>
+         <li><a href="#">Algebra</a></li>
+         <li><a href="#">Geometry</a></li>
+         <li><a href="#">Pre-Calculus</a></li>
+         <li><a href="#">Calculus</a></li>
+         <li><a href="#">Linear Algebra</a></li>
+         <li class="newTopic"><a href="#">Math Games</a></li>
+         <li><a href="#">Puzzles</a></li>
+         <li><a href="#">The Game of Life</a></li>
+         <li><a href="#">Fractals</a></li>
+         <li class="newTopic"><a href="#">Demos</a></li>
+         <li><a href="#">Programs</a></li>
+         <li><a href="#">The Mailbag</a></li>
+         <li><a href="#">FAQs</a></li>
+      <ul>
+   </div>
+
+   <div id="mainColumn">
+
+      <div id="movie">
+
+               
+     <!--[if IE]><!-->
+     
+     	<object data="mandel.swf" type="application/x-shockwave-flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" width="320" height="260">
+     	
+     <!--<![endif]-->
+     
+     <!--[if !IE]><!-->
+     
+     	<object data="mandel.swf" type="application/x-shockwave-flash" width="320" height="260">
+     	
+     <!--<![endif]-->
+     
+          	<param name="movie" value="mandel.swf" />
+          	<param name="quality" value="high" />
+          	<param name="menu" value="false" />
+          	<param name="standby" value="Loading movie. Please wait." />
+          	
+          	<embed src="mandel.swf" type="application/x-shockwave-flash" width="320" height="260" movie="rwdance.swf" quality="high" menu="false" standby="Loading movie. Please wait.">
+          	
+          	To play this clip, you need Adobe Flash Player.
+          	</embed>
+          	
+          </object>
+
+      </div>
+
+      <p class="first-p">A fractal is a geometric object that retains 
+         its complexity under any level of magnification. Many fractals are 
+         <i>self-similar</i> in that the fractal image is infinitely repeated on 
+         a smaller scale as one "zooms" into the object. The most famous of the 
+         fractal objects is the <i>Mandelbrot Set</i> named after its discoverer, 
+         Benoit B. Mandelbrot. As you can see in the accompanying video, the 
+         Mandelbrot Set, a bug-shaped object, appears again and again as one 
+         magnifies the image.</p>
+
+      <p>Fractals are not simply an abstract geometric concept. Fractals appear
+         everywhere in nature: from the irregular shape of a coastline to the outlines
+         of trees, clouds, and mountains. The application of fractal geometry to 
+         science and physics has allowed mathematicians and physicists to describe
+         phenomena that had, until recently, eluded description.</p>
+
+      <div id="fractal">
+         <h2>Ready to explore your own fractals? Great. Use the Java
+            applet below.</h2>
+
+         <ul>
+            <li>To improve the resolution of the fractal image, change the
+                value in the drop-down list box (a value of 1 is the most 
+                precise; 10 is the least) and click <span>Redraw</span>
+            </li>
+            <li>To magnify a particular section of the fractal, click 
+                <span>Zoom In</span> and drag a rectangle over the section you 
+                want to magnify.
+            </li>
+            <li>To switch between the Mandelbrot Set and the Julia Set 
+                (another type of fractal, closely related to the Mandelbrot 
+                 Set), click <span>Switch [M <-> J]</span> and then click a spot 
+                 on the Mandelbrot Set.
+            </li>
+         </ul>
+
+           <div id="demo">
+			<!--[if IE]><!-->
+			
+               	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/update/1.6.0/jinstall-6-windows-i586.cab" type="application/x-java-applet" width="280" height="240">
+               		<param name="code" value="Mandel.class" />
+               		
+               <!--<![endif]-->
+               
+               <!--[if !IE]><!-->
+               
+               	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" type="application/x-java-applet" width="280" height="240">
+               	
+               <!--<![endif]-->
+               
+               
+               	<param name="code" value="Mandel.class" />
+
+                                   
+                  <br /><br />
+                  Your browser does not support Java applets.
+
+                  
+                  </object>
+
+           </div>
+
+           <p id="cite">This applet is generously provided by 
+              <a href="http://daa.com.au/~james/fractals/">James Henstridge</a>.
+           </p>
+      </div>
+
+   </div>
+
+</div>
+
+</body>
+</html>

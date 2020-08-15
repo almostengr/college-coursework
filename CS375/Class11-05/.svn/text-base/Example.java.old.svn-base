@@ -1,0 +1,125 @@
+/*
+use a JLabel to determine what color to change to. 
+
+class sq extends JLabel
+implements MouseListener
+
+java.awt.Container
+look in javax.swing.JComponent
+*/
+
+
+import java.awt.*;
+import java.awt.event;
+import javax.swing.*;
+import javax.swing.event;
+
+public class Example extends JFrame{
+	public Example(){
+		setTitle("Me");
+		setSize(500,500);
+		setVisible(true);
+		
+	
+		//GridLayout gl = new GridLayout(2,1);	//takes rows and colums as parameters
+
+
+		GridBagLayout gbl = new GridBagLayout();
+		GridBagConstraints c = new GridBagConstraints();
+
+		setLayout(gbl);	//lays out page
+
+		Rectangle hello = new Rectangle(Color.red, "How goes it");
+		BigRectangle hi = new BigRectangle(Color.blue);
+
+		//JLabel hello = new JLabel("How goes it");
+		//JLabel hi = new JLabel("hello there");
+		
+
+		//add(hello);
+		//add(hi);
+
+
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx = 0;	
+		c.gridy = 0;
+		add(hello,c);
+
+		hello.addMouseListener(hello);
+		c.gridx = 1;
+		c.gridy = 0;
+		add(new Rectangle(Color.green, "Green"), c);
+
+		c.gridx = 2;
+		c.gridy = 0;
+		add(new Rectangle(Color.yellow, "Yellow"), c);
+
+		c.gridx = 3;
+		c.gridy = 0;
+		add(new Rectangle(Color.orange, "Orange"), c);
+		
+		c.gridx = 0;	
+		c.gridy = 1;
+		c.gridwidth = 4;
+		add(hi,c);
+		pack(); //resizes window to only fit window contents
+
+	}
+
+	class Rectangle extends JLabel{
+
+		public Dimension minSize = new Dimension(100,100);
+		
+ 		Color bg;
+		String name;
+
+		public Rectangle(Color c, String text){
+			super(text);
+			//setBackground(c);
+			bg = c;
+
+			name = text;
+		}
+		
+		public void paint (Graphics g){
+			g.setColor(bg);
+			g.fillRect(0,0,(int) minSize.getWidth(), (int) minSize.getHeight());
+			/*
+			HAS TO BE CASTED TO AN INT BECAUSE DIMENSIONS ARE DOUBLES.
+			FILLRECT DOES NOT TAKE DOUBLES.*/
+		}
+
+		public Dimension getMinimumSize(){//minimum size
+			return minSize;
+		}
+
+		public Dimension getPreferredSize(){	
+			return minSize;
+		}
+
+public void mouseClicked(MouseEvent e){
+	System.out.println("You clicked " + text);
+}
+public void mouseEntered(MouseEvent e){ }
+/*
+mouseexited
+mousepressed
+mousereleased
+*/
+
+
+
+	}
+
+	class BigRectangle extends Rectangle{
+		public BigRectangle(Color c){
+			super(c,"");	//super calls parent's constructor
+			minSize = new Dimension (400,400);
+		}
+	}
+
+	public static void main(String args[]){
+		Example e = new Example();
+	}
+
+}

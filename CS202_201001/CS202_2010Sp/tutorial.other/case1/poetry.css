@@ -1,0 +1,35 @@
+/*
+   New Perspectives on HTML and XHTML 5th Edition
+   Tutorial 7
+   Case Problem 1
+
+   Online Poetry Style Sheet
+
+   Filename:         poetry.css
+   Supporting Files: tan.jpg
+
+
+*/
+
+body                 {margin: 0px; padding: 0px; font-size: 15px; 
+                      font-family: Arial, Helvetica, sans-serif;
+                      background-image: url(tan.jpg)}
+
+#pageContent         {position: absolute; top: 0px; left: 30px; width: 700px}
+
+#links               {text-align: center; font-size: 10px}
+#links a             {margin: 0px 10px}
+
+#head                {text-align: center; margin-top: 10px}
+
+.firstp:first-letter {float: left; font-size: 300%; line-height: 0.7; 
+                      margin: 0px 3px 3px 0px}
+.firstp:first-line   {font-variant: small-caps}
+
+h2                   {font-size: 14px; letter-spacing: 3px; margin: 0px}
+.poem p              {margin: 10px}
+
+.poem                {float: left; margin-right: 20px}
+   
+#footer              {border-top: 1px solid black; width: 100%; text-align: right; 
+                      font-size: 10px; clear: left; padding-bottom: 10px}

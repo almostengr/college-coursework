@@ -45,7 +45,7 @@ Do you want to process another file (Y/N)? n
 
 
 
-/*	Kenneth Robinson
+/*	
 	Assignment 5
 	CIS 251
 	March 2, 2006
