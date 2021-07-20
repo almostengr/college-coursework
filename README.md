@@ -20,17 +20,32 @@ that were taught or used in that clsas.
 
 ### CS 114
 
+* C++
+
 ### CS 114 (Spring 2008)
+
+* C++
 
 ### CS 114 (Fall 2007)
 
+* C++
+
 ### CS 124
+
+* C++
 
 ### CS 202
 
+* HTML
+
 ### CS 205
 
+* HTML
+* CSS
+
 ### CS 285
+
+* MS Excel
 
 ### CS 325
 
@@ -43,6 +58,8 @@ that were taught or used in that clsas.
 ### MIS 295
 
 ### MIS 320
+
+* Visual Basic
 
 ### MIS 330
 
